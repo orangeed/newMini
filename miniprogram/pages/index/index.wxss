@@ -1,0 +1,54 @@
+/**index.wxss**/
+page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.list-container {
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  margin-top: 120px;
+  width: 100%;
+}
+
+.list-item {
+  box-sizing: border-box;
+  padding: 10rpx;
+  width: 33.33%;
+}
+
+.item-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item-image {
+  width: 80rpx;
+  height: 80rpx;
+  margin-bottom: 10rpx;
+}
+
+.item-name {
+  font-size: 24rpx;
+  text-align: center;
+}
+
+.custom-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.bing-wallpaper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.wallpaper-image {
+  width: 100%;
+}
