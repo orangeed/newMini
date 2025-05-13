@@ -16,13 +16,6 @@
       }
     },
     {
-      "path": "pages/markmap/index",
-      "style": {
-        "navigationBarTitleText": "思维导图",
-        "navigationStyle": "custom"
-      }
-    },
-    {
       "path": "pages/newduanju/index",
       "style": {
         "navigationBarTitleText": "短剧查询",
@@ -68,13 +61,6 @@
       "path": "pages/vacation/index",
       "style": {
         "navigationBarTitleText": "假期表",
-        "navigationStyle": "custom"
-      }
-    },
-    {
-      "path": "pages/loan/index",
-      "style": {
-        "navigationBarTitleText": "房贷计算器",
         "navigationStyle": "custom"
       }
     },

@@ -10,3 +10,19 @@ uni-button {
   margin-left: inherit !important;
   margin-right: inherit !important;
 }
+
+uni-input {
+  height: 32px;
+  border: 1px solid #d9d9d9;
+  padding: 2px 8px;
+}
+.uni-input-placeholder {
+  padding-left: 8px;
+}
+
+.uni-picker-item {
+  width: 100px;
+}
+// .uni-picker-container .uni-picker-custom {
+//   width: 100px !important;
+// }
