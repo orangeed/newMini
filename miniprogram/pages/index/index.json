@@ -1,7 +1,0 @@
-{
-  "usingComponents": {
-    "customHeader": "../../component/customHeader/index"
-  },
-  "navigationStyle": "custom",
-  "navigationBarTextStyle": "black"
-}

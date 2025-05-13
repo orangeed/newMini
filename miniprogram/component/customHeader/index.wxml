@@ -1,7 +1,0 @@
-<!-- components/custom-navbar/custom-navbar.wxml -->
-<view class="navbar" style="height: {{navBarHeight}}px; padding-top: {{statusBarHeight}}px; background-color: transparent">
-  <view class="navbar-content" style="justify-content: center">
-    <view class="back-btn" bindtap="goBack" wx:if="{{showBack}}">‹</view>
-    <view class="title" style="flex: 1; text-align: center; background: linear-gradient(to right,rgb(255, 166, 0),rgb(1, 111, 255)); -webkit-background-clip: text; color: transparent">{{title}}</view>
-  </view>
-</view>

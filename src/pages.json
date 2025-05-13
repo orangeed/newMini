@@ -1,0 +1,102 @@
+{
+  "pages": [
+    //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+    {
+      "path": "pages/login/index",
+      "style": {
+        "navigationBarTitleText": "首页",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/removeWatermark/index",
+      "style": {
+        "navigationBarTitleText": "去水印",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/markmap/index",
+      "style": {
+        "navigationBarTitleText": "思维导图",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/newduanju/index",
+      "style": {
+        "navigationBarTitleText": "短剧查询",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/tojson/index",
+      "style": {
+        "navigationBarTitleText": "转json",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/shortUrl/index",
+      "style": {
+        "navigationBarTitleText": "短链接",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/pdf2word/index",
+      "style": {
+        "navigationBarTitleText": "pdf转word",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/deenCode/index",
+      "style": {
+        "navigationBarTitleText": "解码编码",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/soft/index",
+      "style": {
+        "navigationBarTitleText": "软件收集",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/vacation/index",
+      "style": {
+        "navigationBarTitleText": "假期表",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/loan/index",
+      "style": {
+        "navigationBarTitleText": "房贷计算器",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/aitools/index",
+      "style": {
+        "navigationBarTitleText": "AI工具",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/wxeditor/index",
+      "style": {
+        "navigationBarTitleText": "微信公众号编辑器",
+        "navigationStyle": "custom"
+      }
+    }
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  }
+}
