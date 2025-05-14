@@ -1,20 +1,28 @@
-<!--
- * @Author: chenjie
- * @Date: 2025-05-13 10:03:36
- * @LastEditors: chenjie chenjie@i2value.com
- * @LastEditTime: 2025-05-13 16:20:53
- * @FilePath: \project3\src\App.vue
--->
-<template>
-  <img src="https://picsum.photos/1920/1080" style="position: absolute; z-index: -1; height: 100%; width: 100%" />
-  <RouterView />
-</template>
-
 <script setup>
+console.log(11)
 </script>
 
-<style>
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+<style lang="scss">
+@use 'tailwindcss/base';
+@use 'tailwindcss/components';
+@use 'tailwindcss/utilities';
+
+/*  #ifdef  H5  */
+svg {
+  display: initial;
+}
+
+/*  #endif  */
+
+// @layer components {
+//   .raw-btn {
+//     // 注意 after: 后面不能加任何空格，有些格式化工具可能会在这里自动加一个空格
+//     @apply after:border-none inline-flex items-center gap-2 rounded text-sm font-semibold transition-all;
+//   }
+
+//   .btn {
+//     // 使用上面定义的 raw-btn
+//     @apply raw-btn bg-gradient-to-r from-[#9e58e9] to-blue-500 px-2 py-1 text-white;
+//   }
+// }
 </style>

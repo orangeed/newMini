@@ -28,7 +28,6 @@ import { useRouter } from 'vue-router';
 import { ref } from 'vue'
 import { getAssetsFile } from '../../utils';
 import { routerList } from '../../enmu';
-import { Notification } from '@arco-design/web-vue';
 import { getMenuList } from '../../serve/login';
 
 const router = useRouter()

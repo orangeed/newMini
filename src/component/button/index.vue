@@ -44,6 +44,7 @@ defineEmits(['click']);
   color: #333;
   user-select: none;
   position: relative;
+  height: 32px;
 }
 
 .a-button:hover:not(:disabled):not(.is-loading) {

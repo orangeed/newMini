@@ -20,7 +20,8 @@
                         <div class="dot"></div><span>{{ result.title }}</span>
                     </div>
                     <div class="img" v-if="result.images">
-                        <Oimage v-for="(item, index) in result.images" :key="index" :src="item"></Oimage>
+                        <Oimage v-for="(item, index) in result.images" :key="index" :previewList="result.images"
+                            :src="item"></Oimage>
                     </div>
                     <div v-if="result.url" class="video">
                         <video controls>
@@ -44,7 +45,7 @@ import Oimage from '../../component/image/index.vue';
 
 const text = ref('')
 
-const result = ref({ images: ['https://img.88tph.com/87/c9/h8m8dbbfEeyEcQAWPgWqLw-1.jpg!/watermark/url/L3BhdGgvbG9nby5wbmc/align/center/fw/640/quality/70'] })
+const result = ref({})
 
 const loading = ref(false)
 const handleOk = () => {

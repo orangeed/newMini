@@ -1,7 +1,7 @@
 <template>
     <div class="a-textarea-wrapper" @mouseenter="hovering = true" @mouseleave="hovering = false">
-        <textarea ref="textareaRef" v-model="inputValue" class="a-textarea" :style="textareaStyle"
-            @input="handleInput"></textarea>
+        <textarea ref="textareaRef" v-model="inputValue" class="a-textarea" :style="textareaStyle" @input="handleInput"
+            :placeholder="placeholder"></textarea>
         <span v-if="allowClear && inputValue" class="a-textarea-clear" @click="clearInput" v-show="hovering">×</span>
     </div>
 </template>
@@ -21,7 +21,11 @@ const props = defineProps({
     autoSize: {
         type: [Boolean, Object],
         default: false
-    }
+    },
+    placeholder: {
+        type: String,
+        default: ''
+    },
 });
 
 const emit = defineEmits(['update:modelValue']);
