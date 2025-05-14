@@ -1,12 +1,12 @@
 <!-- 去水印 -->
 <template>
     <div id="remove-water-mark">
-        <a-spin :loading="loading" tip="解析中...">
-            <a-card title="去水印（支持主流平台）" class="card" :bordered="false">
+        <OSpin :loading="loading" tip="解析中...">
+            <OCard title="去水印（支持主流平台）" class="card" :bordered="false">
                 <div class="space">
-                    <a-textarea style="width: 100%;" placeholder="这里是输入你在平台上复制的分享链接哈..." allow-clear auto-size
-                        v-model="text" />
-                    <a-button type="primary" class="btn" @click="handleOk">确定</a-button>
+                    <OTextarea style="width: 100%;" placeholder="这里是输入你在平台上复制的分享链接哈..." allow-clear
+                        :auto-size="{ minRows: 2, maxRows: 6 }" v-model="text" />
+                    <OButton type="primary" class="btn" @click="handleOk">确定</OButton>
                 </div>
                 <div class="tips">
                     <p>1.你需要在想要去水印的图片或者视频中，选择分享，复制分享链接，将复制的内容粘贴在这里，点击确定即可。</p>
@@ -20,7 +20,7 @@
                         <div class="dot"></div><span>{{ result.title }}</span>
                     </div>
                     <div class="img" v-if="result.images">
-                        <a-image v-for="(item, index) in result.images" :key="index" :src="item"></a-image>
+                        <Oimage v-for="(item, index) in result.images" :key="index" :src="item"></Oimage>
                     </div>
                     <div v-if="result.url" class="video">
                         <video controls>
@@ -28,18 +28,23 @@
                         </video>
                     </div>
                 </div>
-            </a-card>
-        </a-spin>
+            </OCard>
+        </OSpin>
     </div>
 </template>
 
 <script lang="js" setup>
 import { ref } from 'vue';
 import { removeWaterMark } from '../../serve/removeWaterMark';
+import OSpin from '../../component/spin/index.vue';
+import OCard from '../../component/card/index.vue';
+import OTextarea from '../../component/textarea/index.vue';
+import OButton from '../../component/button/index.vue';
+import Oimage from '../../component/image/index.vue';
 
 const text = ref('')
 
-const result = ref({})
+const result = ref({ images: ['https://img.88tph.com/87/c9/h8m8dbbfEeyEcQAWPgWqLw-1.jpg!/watermark/url/L3BhdGgvbG9nby5wbmc/align/center/fw/640/quality/70'] })
 
 const loading = ref(false)
 const handleOk = () => {

@@ -2,7 +2,7 @@
  * @Author: chenjie
  * @Date: 2025-05-13 10:13:38
  * @LastEditors: chenjie chenjie@i2value.com
- * @LastEditTime: 2025-05-13 14:25:50
+ * @LastEditTime: 2025-05-14 17:17:39
  * @FilePath: \project3\src\pages\login\index.vue
 -->
 <template>
@@ -48,7 +48,8 @@ const handleGoTo = (item) => {
 
 // 获取菜单
 const handleGetMenuList = async () => {
-  list.value = await getMenuList()
+  const res = await getMenuList()
+  list.value = res.filter(item => item.where.includes('moblie'))
 }
 handleGetMenuList()
 

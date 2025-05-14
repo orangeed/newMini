@@ -22,13 +22,7 @@
         "navigationStyle": "custom"
       }
     },
-    {
-      "path": "pages/tojson/index",
-      "style": {
-        "navigationBarTitleText": "转json",
-        "navigationStyle": "custom"
-      }
-    },
+
     {
       "path": "pages/shortUrl/index",
       "style": {
@@ -36,45 +30,11 @@
         "navigationStyle": "custom"
       }
     },
-    {
-      "path": "pages/pdf2word/index",
-      "style": {
-        "navigationBarTitleText": "pdf转word",
-        "navigationStyle": "custom"
-      }
-    },
-    {
-      "path": "pages/deenCode/index",
-      "style": {
-        "navigationBarTitleText": "解码编码",
-        "navigationStyle": "custom"
-      }
-    },
-    {
-      "path": "pages/soft/index",
-      "style": {
-        "navigationBarTitleText": "软件收集",
-        "navigationStyle": "custom"
-      }
-    },
-    {
-      "path": "pages/vacation/index",
-      "style": {
-        "navigationBarTitleText": "假期表",
-        "navigationStyle": "custom"
-      }
-    },
+
     {
       "path": "pages/aitools/index",
       "style": {
         "navigationBarTitleText": "AI工具",
-        "navigationStyle": "custom"
-      }
-    },
-    {
-      "path": "pages/wxeditor/index",
-      "style": {
-        "navigationBarTitleText": "微信公众号编辑器",
         "navigationStyle": "custom"
       }
     }

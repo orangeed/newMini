@@ -137,7 +137,7 @@ const pageList = computed(() => {
 })
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .pagination-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -179,6 +179,10 @@ const pageList = computed(() => {
 .quick-jump {
     display: flex;
     align-items: center;
+
+    .uni-input-placeholder {
+        padding-left: 0
+    }
 }
 
 .picker {
@@ -186,6 +190,8 @@ const pageList = computed(() => {
     border: 1px solid #ccc;
     border-radius: 6rpx;
     margin-left: 10rpx;
+    height: 32px;
+    line-height: 32px;
 }
 
 .jump-input {

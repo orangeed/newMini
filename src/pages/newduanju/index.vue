@@ -55,7 +55,7 @@
             </div>
             <div v-else><a-empty /></div>
             <!-- 加载更多 -->
-            <div class="flex justify-center mb-2" v-if="pageConfig.total > 0">
+            <div class="flex justify-center mb-2 mt-4" v-if="pageConfig.total > 0">
                 <!-- <MyPagination :size="documentSize >= 1400 ? 'medium' : 'mini'" :current="pageConfig.page"
                     :page-size="pageConfig.size" :total="pageConfig.total" :simple="false" showPageSize
                     :size-options="[30, 50, 100, 150]" @change="handleChangePage" @pageSizeChange="handleChangeSize"
