@@ -85,6 +85,7 @@ provide('activeName', current)
   font-size: 28rpx;
   color: #666;
   flex-shrink: 0;
+  cursor: pointer;
 }
 
 .tab-header.active {

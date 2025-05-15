@@ -30,3 +30,13 @@ uni-input {
   width: 100px !important;
   left: 1028.469px !important;
 }
+
+.background-cover {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://picsum.photos/1920/1080');
+  background-size: cover;
+  background-position: center;
+}

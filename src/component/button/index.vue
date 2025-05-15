@@ -1,10 +1,6 @@
 <template>
-  <button
-    class="a-button"
-    :class="[`a-button-${type}`, { 'is-loading': loading }]"
-    :disabled="disabled || loading"
-    @click="$emit('click', $event)"
-  >
+  <button class="a-button" :class="[`a-button-${type}`, { 'is-loading': loading }]" :disabled="disabled || loading"
+    @click="$emit('click', $event)">
     <span v-if="loading" class="a-button-spinner"></span>
     <slot />
   </button>
@@ -45,6 +41,7 @@ defineEmits(['click']);
   user-select: none;
   position: relative;
   height: 32px;
+  /* width: 100%; */
 }
 
 .a-button:hover:not(:disabled):not(.is-loading) {
@@ -123,7 +120,12 @@ defineEmits(['click']);
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 </style>

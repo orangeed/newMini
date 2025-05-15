@@ -1,9 +1,9 @@
 /*
  * @Author: chenjie
  * @Date: 2025-01-16 09:17:18
- * @LastEditors: orangeed 1208917130@qq.com
- * @LastEditTime: 2025-05-14 23:03:09
- * @FilePath: \uni-app-vite-vue3-tailwind-vscode-template\src\utils\request.js
+ * @LastEditors: chenjie chenjie@i2value.com
+ * @LastEditTime: 2025-05-15 09:43:42
+ * @FilePath: \project3\src\utils\request.js
  * @Description:
  */
 const baseURL = 'https://api.orangecj.cn'
@@ -42,7 +42,7 @@ function request(options) {
   const config = {
     url: baseURL + options.url,
     method: options.method || 'GET',
-    data: options.data || {},
+    data: options.data ? options.data : options.params || {},
     header: {
       'Content-Type': 'application/json',
       ...(options.header || {}),

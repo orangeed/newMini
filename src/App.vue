@@ -1,5 +1,14 @@
+<!--
+ * @Author: chenjie
+ * @Date: 2025-05-15 09:34:11
+ * @LastEditors: chenjie chenjie@i2value.com
+ * @LastEditTime: 2025-05-15 16:28:38
+ * @FilePath: \project3\src\App.vue
+-->
 <script setup>
-console.log(11)
+import { createNavBarContext } from './utils/useNavBarHeight.ts'
+
+createNavBarContext() // 提供全局导航栏高度
 </script>
 
 <style lang="scss">
