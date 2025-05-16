@@ -72,8 +72,8 @@ handleInit()
   <!-- #ifndef H5 -->
   <CostomNavBar title="短剧查询" showBack />
   <!-- #endif -->
-  <div class="min-h-screen bg-gray-50" :style="{ paddingTop: `${navBarHeight}px` }">
-    <div class="background-cover" />
+  <div class="background-cover min-h-screen" :style="{ paddingTop: `${navBarHeight}px`, height: 'fit-content' }">
+    <!-- <div class="background-cover" /> -->
     <!-- 导航栏 -->
     <nav
       class="fixed z-10 w-full  shadow-sm"
@@ -81,15 +81,17 @@ handleInit()
     >
       <div class="mx-auto max-w-7xl px-4">
         <div class="flex h-16 items-center justify-between">
+          <!-- #ifdef H5 -->
           <div class="flex items-center">
             <h1 class="text-2xl font-bold text-gray-800">
               橘子的分享
             </h1>
           </div>
+          <!-- #endif -->
           <div class="ml-8 flex max-w-xl flex-1 items-center">
             <div class="relative flex w-full ">
               <input
-                v-model="searchText" placeholder="搜索影视剧..." class="!rounded-button w-full" allow-clear
+                v-model="searchText" placeholder="搜索影视剧..." class="!rounded-button w-full text-white" allow-clear
                 search-button
               >
               <button type="primary" class="btn w-24" @click="handleSearchByPage">

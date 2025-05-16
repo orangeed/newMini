@@ -1,9 +1,18 @@
+<!--
+ * @Author: chenjie
+ * @Date: 2025-05-15 16:14:04
+ * @LastEditors: chenjie chenjie@i2value.com
+ * @LastEditTime: 2025-05-16 15:38:02
+ * @FilePath: \project3\src\component\navbar\index.vue
+-->
 <script setup lang="ts">
 import { useNavBarContext } from '../../utils/useNavBarHeight.ts'
 
 const props = defineProps<{
   title?: string
   showBack?: boolean
+  backStyle?: string
+  titleStyle?: string
 }>()
 
 const { statusBarHeight, navBarHeight } = useNavBarContext()
@@ -22,29 +31,24 @@ function goBack() {
 <template>
   <view class="custom-navbar" :style="{ paddingTop: `${statusBarHeight}px`, height: `${navBarHeight}px` }">
     <view class="nav-content">
-      <view v-if="props.showBack" class="back-btn" @tap="goBack">
+      <view class="back-btn" @tap="goBack">
         <image
+          v-if="props.showBack"
           src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cGF0aCBkPSJNMTUgMThMOSAxMkwxNSA2IiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K"
           class="back-icon"
+          :style="props.backStyle"
         />
       </view>
-      <view class="title">
+      <view class="title" :style="props.titleStyle">
         {{ props.title }}
       </view>
+      <view class="w-6" />
     </view>
   </view>
 </template>
 
 <style scoped>
 .custom-navbar {
-  /* position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 999;
-  background-color: transparent;
-  color: #fff; */
-
   position: fixed;
   top: 0;
   left: 0;
@@ -70,6 +74,7 @@ function goBack() {
 
 .back-btn {
   padding-right: 20rpx;
+  flex: 1;
 }
 
 .back-icon {
@@ -78,9 +83,9 @@ function goBack() {
 }
 
 .title {
-  flex: 1;
   text-align: center;
   font-size: 34rpx;
   font-weight: bold;
+  width: 100%;
 }
 </style>
