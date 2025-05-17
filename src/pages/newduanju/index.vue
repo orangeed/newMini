@@ -1,11 +1,14 @@
 <!-- 新写的短剧页面 -->
 <script lang="js" setup>
 import { reactive, ref } from 'vue'
+import OMessage from '../../component/message/index.vue'
 import MyPagination from '../../component/pagination/index.vue'
 import Tabs from '../../component/tabs/index.vue'
 import TabPane from '../../component/tabs/TabPane.vue'
 import { getDuanjuPage, patchNum, saveLookTime } from '../../serve/duanju'
 import { MOVIES_TYPE } from '../../utils/emun'
+import { useClipboard } from '../../utils/index'
+import { Message } from '../../utils/message'
 import { useNavBarContext } from '../../utils/useNavBarHeight.ts'
 
 const { navBarHeight } = useNavBarContext()
@@ -14,6 +17,7 @@ const loading = ref(false)
 const result = ref([])
 const searchText = ref('')
 const navigation = [{ name: '首页', type: 'all' }, { name: '短剧', type: '' }, { name: '电影', type: '3' }, { name: '电视剧', type: '1' }, { name: '动漫', type: '4' }]
+const { copy } = useClipboard()
 
 // 分页查询
 function handleSearchByPage() {
@@ -61,6 +65,13 @@ function handleGoTo(item) {
 function handleSaveLookTime() {
   saveLookTime()
 }
+
+// 复制链接
+async function handleCppy(item) {
+  await copy(item.url)
+  Message.success('已复制到剪贴板！')
+}
+
 function handleInit() {
   handleSearchByPage()
   handleSaveLookTime()
@@ -139,9 +150,16 @@ handleInit()
                 {{ movie.description }}
               </p>
             </div>
+            <!-- #ifdef MP-WEIXIN -->
+            <button type="primary" class="!rounded-button btn whitespace-nowrap" @click="handleCppy(movie)">
+              复制影视链接
+            </button>
+            <!-- #endif -->
+            <!-- #ifdef H5 -->
             <button type="primary" class="!rounded-button btn whitespace-nowrap" @click="handleGoTo(movie)">
               立即观看
             </button>
+            <!-- #endif -->
           </div>
         </div>
       </div>
@@ -163,5 +181,6 @@ handleInit()
         <p>Copyright © 2022-2024 by orange</p>
       </footer> -->
     </main>
+    <OMessage />
   </div>
 </template>
