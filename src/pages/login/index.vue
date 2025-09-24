@@ -2,7 +2,7 @@
  * @Author: chenjie
  * @Date: 2025-05-13 10:13:38
  * @LastEditors: chenjie chenjie@i2value.com
- * @LastEditTime: 2025-09-24 18:01:43
+ * @LastEditTime: 2025-09-24 18:06:53
  * @FilePath: \newMini\src\pages\login\index.vue
 -->
 <script lang="js" setup name="login">
@@ -55,7 +55,6 @@ handleGetMenuList()
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    height: calc(100% - 100px);
     overflow: auto;
   }
 
@@ -119,6 +118,15 @@ handleGetMenuList()
   .item:nth-child(5) {
     background-image: url('https://picsum.photos/id/1045/600/400');
     /* 壁纸 */
+  }
+
+  .item:nth-child(6) {
+    background-image: url('https://picsum.photos/id/1055/600/400');
+    /* 网易云会员 */
+  }
+  .item:nth-child(7) {
+    background-image: url('https://picsum.photos/id/1065/600/400');
+    /* 网盘会员 */
   }
 }
 </style>
