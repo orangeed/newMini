@@ -86,10 +86,8 @@ handleInit()
   <div class="background-cover min-h-screen" :style="{ paddingTop: `${navBarHeight}px`, height: 'fit-content' }">
     <!-- <div class="background-cover" /> -->
     <!-- 导航栏 -->
-    <nav
-      class="fixed z-10 w-full  shadow-sm"
-      style="background-color: rgba(255, 255, 255, 0.15);  backdrop-filter: blur(12px);  -webkit-backdrop-filter: blur(12px);  color: #fff;  border-bottom: 1px solid rgba(255, 255, 255, 0.2);"
-    >
+    <nav class="fixed z-10 w-full  shadow-sm"
+      style="background-color: rgba(255, 255, 255, 0.15);  backdrop-filter: blur(12px);  -webkit-backdrop-filter: blur(12px);  color: #fff;  border-bottom: 1px solid rgba(255, 255, 255, 0.2);">
       <div class="mx-auto max-w-7xl px-4">
         <div class="flex h-16 items-center justify-between">
           <!-- #ifdef H5 -->
@@ -101,10 +99,8 @@ handleInit()
           <!-- #endif -->
           <div class="ml-8 flex max-w-xl flex-1 items-center">
             <div class="relative flex w-full ">
-              <input
-                v-model="searchText" placeholder="搜索影视剧..." class="!rounded-button w-full text-white" allow-clear
-                search-button
-              >
+              <input v-model="searchText" placeholder="搜索影视剧..." class="!rounded-button w-full text-white" allow-clear
+                search-button>
               <button type="primary" class="btn w-24" @click="handleSearchByPage">
                 搜索
               </button>
@@ -126,10 +122,8 @@ handleInit()
     <main class="mx-auto max-w-7xl bg-transparent px-4 pb-12 pt-32" style="background:transparent">
       <!-- 影视列表 -->
       <div v-if="result.length > 0" class="space-y-4">
-        <div
-          v-for="movie in result" :key="movie.id"
-          class="rounded-lg bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
-        >
+        <div v-for="movie in result" :key="movie.id"
+          class="rounded-lg bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
           <div class="flex items-start justify-between">
             <div class="flex-1">
               <h3 class="text-xl font-bold text-gray-900">
@@ -168,10 +162,8 @@ handleInit()
       </div>
       <!-- 加载更多 -->
       <div v-if="pageConfig.total > 0" class="mb-2 mt-4 flex justify-center">
-        <MyPagination
-          v-model:current="pageConfig.page" v-model:pageSize="pageConfig.size" :total="pageConfig.total"
-          :pageSizeOptions="[15, 30, 50, 100]" @page-change="handleChangePage" @page-size-change="handleChangeSize"
-        />
+        <MyPagination v-model:current="pageConfig.page" v-model:pageSize="pageConfig.size" :total="pageConfig.total"
+          :pageSizeOptions="[15, 30, 50, 100]" @page-change="handleChangePage" @page-size-change="handleChangeSize" />
       </div>
       <!-- 底部 -->
       <!-- <footer class="flex h-16 flex-col items-center justify-center text-center text-sm font-bold text-gray-600">

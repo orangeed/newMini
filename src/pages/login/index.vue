@@ -2,8 +2,8 @@
  * @Author: chenjie
  * @Date: 2025-05-13 10:13:38
  * @LastEditors: chenjie chenjie@i2value.com
- * @LastEditTime: 2025-05-15 17:50:31
- * @FilePath: \project3\src\pages\login\index.vue
+ * @LastEditTime: 2025-09-24 18:01:43
+ * @FilePath: \newMini\src\pages\login\index.vue
 -->
 <script lang="js" setup name="login">
 import { ref } from 'vue'
@@ -32,11 +32,6 @@ async function handleGetMenuList() {
   list.value = res.filter(item => item.where.includes('moblie'))
 }
 handleGetMenuList()
-
-// 跳转到官网
-// function handleToGov() {
-//   window.open('https://beian.miit.gov.cn/')
-// }
 </script>
 
 <template>
@@ -45,18 +40,9 @@ handleGetMenuList()
     <div class="background-cover" />
     <div class="box" :style="{ paddingTop: `${navBarHeight}px` }">
       <div v-for="(item, index) in list" :key="index" class="item" @click="handleGoTo(item)">
-        <!-- <img :src="getAssetsFile(item.img)" class="img" /> -->
-        <img :src="item.img" class="img">
-        <span class=" mt-2 text-base font-bold">{{ item.name }}</span>
-        <!-- <p class="mt-4">{{ item.describe }}</p> -->
+        <span class="mt-2 font-bold">{{ item.name }}</span>
       </div>
     </div>
-    <!-- <div class="footer font-bold text-orange-600">
-      <p class="text-hover cursor-pointer " @click.stop="handleToGov">
-        蜀ICP备2022021714号-1
-      </p>
-      <p>Copyright © 2022-2025 by orange</p>
-    </div> -->
   </div>
 </template>
 
@@ -81,26 +67,58 @@ handleGetMenuList()
   .item {
     width: 160px;
     height: 160px;
-    border-radius: 10px;
-    background-color: rgba(218, 218, 218, 0.6);
-    margin: 10px 10px;
+    border-radius: 12px;
+    margin: 10px;
     padding: 10px 20px;
-    // border: 1px solid #ccc;
     cursor: pointer;
     transition: all 0.3s;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    .img {
-      height: 60px;
-      width: 60px;
-    }
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
   }
 
   .item:hover {
-    background-color: #eeeeee;
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+  }
+
+  .item:first-child {
+    width: 90%;
+    height: 160px;
+  }
+
+  /* 给不同菜单设置不同背景图 */
+  .item:nth-child(1) {
+    // https://picsum.photos/400/300?random=1
+    background-image: url('https://picsum.photos/id/1015/600/400');
+    /* 在线去水印 */
+  }
+
+  .item:nth-child(2) {
+    background-image: url('https://picsum.photos/id/1005/600/400');
+    /* 影视查询 */
+  }
+
+  .item:nth-child(3) {
+    background-image: url('https://picsum.photos/id/1025/600/400');
+    /* 短链接 */
+  }
+
+  .item:nth-child(4) {
+    background-image: url('https://picsum.photos/id/1035/600/400');
+    /* 软件收集处 */
+  }
+
+  .item:nth-child(5) {
+    background-image: url('https://picsum.photos/id/1045/600/400');
+    /* 壁纸 */
   }
 }
 </style>

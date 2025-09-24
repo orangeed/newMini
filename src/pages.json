@@ -22,7 +22,6 @@
         "navigationStyle": "custom"
       }
     },
-
     {
       "path": "pages/shortUrl/index",
       "style": {
@@ -30,11 +29,24 @@
         "navigationStyle": "custom"
       }
     },
-
     {
       "path": "pages/aitools/index",
       "style": {
         "navigationBarTitleText": "AI工具",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/soft/index",
+      "style": {
+        "navigationBarTitleText": "软件收集",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/wallpaper/index",
+      "style": {
+        "navigationBarTitleText": "壁纸",
         "navigationStyle": "custom"
       }
     }
