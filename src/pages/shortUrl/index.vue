@@ -2,8 +2,8 @@
  * @Author: chenjie
  * @Date: 2025-05-13 20:43:03
  * @LastEditors: chenjie chenjie@i2value.com
- * @LastEditTime: 2025-05-15 17:30:48
- * @FilePath: \project3\src\pages\shortUrl\index.vue
+ * @LastEditTime: 2025-09-25 11:24:14
+ * @FilePath: \newMini\src\pages\shortUrl\index.vue
 -->
 <script lang="js" setup>
 import { ref } from 'vue'
@@ -53,9 +53,8 @@ async function handleCopy() {
 
 <template>
   <div id="short-url" class="flex h-screen w-full flex-col items-center justify-center px-4">
-    <div class="background-cover" />
     <!-- #ifndef H5 -->
-    <CostomNavBar title="短链接" showBack />
+    <CostomNavBar title="短链接" showBack background="#00B26A" />
     <!-- #endif -->
     <OSpin :loading="loading" tip="生成中..." class="w-full flex-col items-center" style="display: flex">
       <div :style="{ paddingTop: `${navBarHeight + 10}px` }">
@@ -75,7 +74,7 @@ async function handleCopy() {
             <OButton type="primary" @click="handleCopy">
               复制短链接
             </OButton>
-            <OButton @click="handleReset">
+            <OButton type="primary" @click="handleReset">
               清空文本
             </OButton>
           </div>

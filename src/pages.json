@@ -49,6 +49,20 @@
         "navigationBarTitleText": "壁纸",
         "navigationStyle": "custom"
       }
+    },
+    {
+      "path": "pages/wangyiyun/index",
+      "style": {
+        "navigationBarTitleText": "网易云会员",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/wangpan/index",
+      "style": {
+        "navigationBarTitleText": "网盘会员",
+        "navigationStyle": "custom"
+      }
     }
   ],
   "globalStyle": {

@@ -1,6 +1,7 @@
 <!-- 去水印 -->
 <script lang="js" setup>
 import { ref } from 'vue'
+import { downloadAndSaveFile, downloadAndSaveFiles } from '@/utils'
 import OButton from '../../component/button/index.vue'
 import OCard from '../../component/card/index.vue'
 import Oimage from '../../component/image/index.vue'
@@ -21,14 +22,26 @@ function handleOk() {
     loading.value = false
   })
 }
+
+// 下载视频
+function handleDownloadVideo(url) {
+  downloadAndSaveFile(url)
+}
+
+// 批量下载图片
+function handleDownloadAllImages(files) {
+  downloadAndSaveFiles(files, ({ index, total, url }) => {
+    console.log(`已完成 ${index}/${total}: ${url}`)
+    Message.info(`已完成 ${index}/${total}`)
+  })
+}
 </script>
 
 <template>
   <div id="remove-water-mark">
     <!-- #ifndef H5 -->
-    <CostomNavBar title="去水印" showBack />
+    <CostomNavBar title="去水印" showBack background="#F85B1B" />
     <!-- #endif -->
-    <div class="background-cover" />
     <OSpin :loading="loading" tip="解析中...">
       <div class="flex justify-center">
         <OCard title="去水印（支持主流平台）" class="card" :bordered="false">
@@ -54,11 +67,21 @@ function handleOk() {
             </div>
             <div v-if="result.images" class="img">
               <Oimage v-for="(item, index) in result.images" :key="index" :previewList="result.images" :src="item" />
+              <button class=" mt-4 w-full text-white" @click="handleDownloadAllImages(result.images)">
+                批量下载图片
+              </button>
             </div>
-            <div v-if="result.url" class="video">
-              <video controls>
-                <source :src="result.url" type="video/mp4">
-              </video>
+            <div v-if="result.url" class="video flex flex-col">
+              <image
+                src="https://sns-img-hw.xhscdn.com/notes_pre_post/1040g3k031mh3ldfpmg1g5ptg8gfjjlev1kq3cv8?imageView2/2/w/0/format/jpg"
+                mode="widthFix"
+              />
+              <button class="w-full text-white">
+                复制链接
+              </button>
+              <button class="mt-4 w-full text-white" @click="handleDownloadVideo(result.url)">
+                下载视频
+              </button>
             </div>
           </div>
         </OCard>

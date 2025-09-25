@@ -2,7 +2,7 @@
  * @Author: chenjie
  * @Date: 2025-05-13 10:13:38
  * @LastEditors: chenjie chenjie@i2value.com
- * @LastEditTime: 2025-09-24 18:06:53
+ * @LastEditTime: 2025-09-25 11:27:04
  * @FilePath: \newMini\src\pages\login\index.vue
 -->
 <script lang="js" setup name="login">
@@ -89,7 +89,7 @@ handleGetMenuList()
   }
 
   .item:first-child {
-    width: 90%;
+    width: 88%;
     height: 160px;
   }
 
@@ -124,6 +124,7 @@ handleGetMenuList()
     background-image: url('https://picsum.photos/id/1055/600/400');
     /* 网易云会员 */
   }
+
   .item:nth-child(7) {
     background-image: url('https://picsum.photos/id/1065/600/400');
     /* 网盘会员 */

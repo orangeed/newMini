@@ -12,6 +12,8 @@ const result = ref([])
 const searchText = ref('')
 const { navBarHeight } = useNavBarContext()
 const { copy } = useClipboard()
+const imgUrl = ref('')
+const visible = ref(false)
 // 分页查询
 function handleSearchByPage() {
   loading.value = true
@@ -50,12 +52,25 @@ async function handleGoTo(url) {
 function handleInit() {
   handleSearchByPage()
 }
+
+// 获取图片链接
+function handleClickImg(data, index) {
+  const list = data.split(',').map((v) => {
+    return v.includes('https') ? v : `https://pic2.zhimg.com/${v}.jpg`
+  })
+  uni.previewImage({
+    urls: list,
+    current: index,
+    loop: true,
+  })
+}
+
 handleInit()
 </script>
 
 <template>
   <!-- #ifndef H5 -->
-  <CostomNavBar title="壁纸" showBack background="#FFCA28" />
+  <CostomNavBar title="壁纸" showBack background="#00A79D" />
   <!-- #endif -->
   <div class="wallpaper bg-white" :style="{ paddingTop: `${navBarHeight}px`, height: 'fit-content' }">
     <!-- 主要内容区 -->
@@ -72,12 +87,11 @@ handleInit()
                 <div
                   v-for="(img, index) in wallPaper.img.split(',')" :key="index"
                   :style="{ width: wallPaper.modalType === 0 ? '150px' : '90px', overflow: hidden }"
-                  @click="handleGoTo(wallPaper.titleUrl)"
                 >
                   <image
                     :src="wallPaper.img.includes('https') ? img : `https://pic2.zhimg.com/${img}.jpg`" :style="{
                       height: wallPaper.modalType === 0 ? '90px' : '160px', width: '100%', overflow: 'hidden',
-                    }"
+                    }" mode="widthFix" @click="handleClickImg(wallPaper.img, index)"
                   />
                 </div>
               </div>
@@ -151,16 +165,5 @@ handleInit()
     /* 保持比例并裁剪 */
     object-fit: cover;
   }
-}
-
-.arco-space {
-  // display: flex;
-  // flex-wrap: wrap;
-  // justify-content: center;
-
-  // div {
-  //     width: 90px !important;
-  //     min-height: 100px;
-  // }
 }
 </style>
