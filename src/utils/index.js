@@ -187,10 +187,10 @@ export function downloadAndSaveFile(url) {
           success: () => resolve(),
           fail: (err) => {
             if (err.errMsg.includes('auth deny')) {
-              wx.showModal({
+              uni.showModal({
                 title: '提示',
                 content: '需要授权保存到相册',
-                success: () => wx.openSetting(),
+                success: () => uni.openSetting(),
               })
             }
             reject(err)

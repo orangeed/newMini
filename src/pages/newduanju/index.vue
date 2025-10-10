@@ -16,7 +16,7 @@ const pageConfig = reactive({ page: 1, size: 15, total: 0, type: 'all' })
 const loading = ref(false)
 const result = ref([])
 const searchText = ref('')
-const navigation = [{ name: '首页', type: 'all' }, { name: '短剧', type: '' }, { name: '电影', type: '3' }, { name: '电视剧', type: '1' }, { name: '动漫', type: '4' }]
+const navigation = [{ name: '全部', type: 'all' }, { name: '短剧', type: '' }, { name: '电影', type: '3' }, { name: '电视剧', type: '1' }, { name: '动漫', type: '4' }, { name: '纪录片', type: '5' }]
 const { copy } = useClipboard()
 
 // 分页查询
@@ -76,6 +76,22 @@ function handleInit() {
   handleSearchByPage()
   handleSaveLookTime()
 }
+
+function handleLookDetail(item) {
+  if (!item.description) { return Message.error('暂无详情') }
+  uni.showModal({
+    title: '影视详情',
+    content: item.description,
+    confirmText: '复制链接',
+    cancelText: '关闭',
+    success: (res) => {
+      if (res.confirm) {
+        handleCppy(item)
+      }
+    },
+  })
+}
+
 handleInit()
 </script>
 
@@ -128,6 +144,7 @@ handleInit()
         <div
           v-for="movie in result" :key="movie.id"
           class="rounded-lg bg-gray-100 p-6 shadow-sm transition-shadow hover:shadow-md"
+          @click="handleLookDetail(movie)"
         >
           <div class="mb-4 flex items-start justify-between">
             <div class="flex-1">
@@ -150,7 +167,10 @@ handleInit()
             </div>
           </div>
           <!-- #ifdef MP-WEIXIN -->
-          <span type="primary" class="w-full whitespace-nowrap rounded bg-orange-400 px-2 py-1 text-sm text-white" @click="handleCppy(movie)">
+          <span
+            type="primary" class="w-full whitespace-nowrap rounded bg-orange-400 px-2 py-1 text-sm text-white"
+            @click="handleCppy(movie)"
+          >
             复制链接
           </span>
           <!-- #endif -->

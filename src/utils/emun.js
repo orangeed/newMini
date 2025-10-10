@@ -11,12 +11,12 @@ export const MITT_CODE = {
   SET_IMAGE_LINE: 'setImageLine',
   SET_IMAGE_ARROW: 'setImageArrow',
   THEME_LIST: 'themeList',
-  THEME_CONTENT:'themeContent'
-};
+  THEME_CONTENT: 'themeContent',
+}
 
 export const MOVIES_TYPE = {
   1: '电视剧',
   3: '电影',
   4: '动漫',
-  5: '短剧',
-};
+  5: '纪录片',
+}
