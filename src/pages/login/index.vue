@@ -2,7 +2,7 @@
  * @Author: chenjie
  * @Date: 2025-05-13 10:13:38
  * @LastEditors: chenjie chenjie@i2value.com
- * @LastEditTime: 2025-09-25 11:27:04
+ * @LastEditTime: 2025-10-10 14:36:23
  * @FilePath: \newMini\src\pages\login\index.vue
 -->
 <script lang="js" setup name="login">
@@ -128,6 +128,10 @@ handleGetMenuList()
   .item:nth-child(7) {
     background-image: url('https://picsum.photos/id/1065/600/400');
     /* 网盘会员 */
+  }
+  .item:nth-child(8) {
+    background-image: url('https://picsum.photos/id/1066/600/400');
+    /* 测试性格测试 */
   }
 }
 </style>

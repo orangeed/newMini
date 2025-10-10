@@ -63,6 +63,13 @@
         "navigationBarTitleText": "网盘会员",
         "navigationStyle": "custom"
       }
+    },
+    {
+      "path": "pages/colorPersonalityTest/index",
+      "style": {
+        "navigationBarTitleText": "色彩性格测试",
+        "navigationStyle": "custom"
+      }
     }
   ],
   "globalStyle": {
