@@ -1,40 +1,41 @@
-<!--
- * @Author: chenjie
- * @Date: 2025-10-10 11:38:07
- * @LastEditors: chenjie chenjie@i2value.com
- * @LastEditTime: 2025-10-10 18:03:52
- * @FilePath: \newMini\src\pages\colorPersonalityTest\index.vue
- * @Description: 色彩性格测试
--->
 <script setup>
 import { ref } from 'vue'
 import { useNavBarContext } from '../../utils/useNavBarHeight.ts'
-import topicList from './components/data.json'
+import topicList from './components/data'
 import Result from './components/result.vue'
 import Topic from './components/topic.vue'
 
 const { navBarHeight } = useNavBarContext()
-/* ====== 版本定义 ====== */
 const versions = [
-  { key: '10', name: '简化版', count: 10, desc: '快速娱乐 / 课间小游戏' },
-  { key: '30', name: '标准版', count: 30, desc: '团队与沟通使用的中等精度版本' },
-  { key: '60', name: '深度版', count: 60, desc: '更稳定的性格倾向结果（题库可扩展）' },
+  { key: 'lite', name: '简化版', count: 10, desc: '快速娱乐 / 课间小游戏' },
+  { key: 'standard', name: '标准版', count: 30, desc: '团队与沟通使用的中等精度版本' },
+  { key: 'deep', name: '深度版', count: 60, desc: '更稳定的性格倾向结果（题库可扩展）' },
 ]
 
 const selectedVersion = ref(null)
-const processState = ref('select') // select, topic, result
+const processState = ref('result') // select, topic, result
+const result = ref({
+  primary: 'R',
+  secondary: 'B',
+  raw: {
+    R: 17,
+    B: 3,
+    Y: 3,
+    G: 2,
+  },
+  radar: [
+    17,
+    3,
+    3,
+    2,
+  ],
+})
 
 function handleStart(versionKey) {
   selectedVersion.value = versionKey
   processState.value = 'topic'
 }
 
-/**
- * 色彩性格测试 - 一键结算
- * @param {Array} answers 用户答案，例：[{id:1, score:5}, {id:2, score:3}, ...]
- * @param {Array} list  上面给的60题JSON
- * @returns {object} {primary:'R', secondary:'B', raw:{R:62,B:48,Y:35,G:41}, radar:[62,48,35,41]}
- */
 function colorScore(answers, list) {
   const raw = { R: 0, B: 0, Y: 0, G: 0 }
   answers.forEach((a) => {
@@ -53,8 +54,7 @@ function colorScore(answers, list) {
 
 function handleResult(data) {
   processState.value = 'result'
-  const result = colorScore(data, topicList)
-  console.log('xxxx', result)
+  result.value = colorScore(data, topicList)
 }
 </script>
 
@@ -64,7 +64,11 @@ function handleResult(data) {
     <CostomNavBar title="色彩性格测试" showBack background="#04D76A" />
     <!-- #endif -->
     <div class="color-text  bg-gray-100" :style="{ paddingTop: `${navBarHeight}px` }">
-      <div :style="{ height: `calc(100vh - ${navBarHeight}px)`, paddingTop: '20px' }">
+      <div
+        :style="{
+          height: `calc(${processState === 'result' ? '100%' : '100vh'} - ${navBarHeight}px)`, paddingTop: '20px',
+        }"
+      >
         <div v-if="processState === 'select'" class="mx-5 max-w-3xl rounded-2xl bg-white p-6 shadow-md">
           <header class="mb-6">
             <h1 class="text-2xl font-semibold">
@@ -88,7 +92,7 @@ function handleResult(data) {
               </p>
               <button
                 class="mt-3 w-full rounded-md border bg-slate-100 py-2 hover:bg-slate-200"
-                @click="handleStart(opt.key)"
+                @click="handleStart(opt.count)"
               >
                 开始测试
               </button>
@@ -96,14 +100,18 @@ function handleResult(data) {
           </div>
 
           <footer class="mt-6 text-xs text-gray-400">
-            注：该测试为性格倾向参考，非诊断性工具。题库可替换或扩展以提高准确度。
+            注：该测试为性格倾向参考，非诊断性工具。结果计算采用积分制，而不是单一的选项统计制，更加精准详细。
           </footer>
         </div>
         <Topic v-if="processState === 'topic'" :version="selectedVersion" @result="handleResult" />
-        <Result v-if="processState === 'result'" />
+        <Result v-if="processState === 'result'" :result="result" />
       </div>
     </div>
   </div>
 </template>
 
-<style></style>
+<style>
+#color-text {
+  height: 100%;
+}
+</style>

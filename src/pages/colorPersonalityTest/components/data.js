@@ -1,722 +1,1442 @@
-[
+export default [
   {
-    "id": 1,
-    "stem": "面对突然提前的截止日期，我会：",
-    "options": [
-      { "text": "立即拍板新方案，先干起来再说", "score": 5 },
-      { "text": "快速拉小组对齐，2h内给路线图", "score": 3 },
-      { "text": "先检查原排期可砍部分，再请示", "score": 2 },
-      { "text": "向上级说明风险，争取把日期谈回", "score": 1 }
+    id: 1,
+    stem: '面对突然提前的截止日期，我会：',
+    options: [
+      {
+        text: '立即拍板新方案，先干起来再说',
+        score: 5,
+      },
+      {
+        text: '快速拉小组对齐，2h 内给路线图',
+        score: 3,
+      },
+      {
+        text: '先检查原排期可砍部分，再请示',
+        score: 2,
+      },
+      {
+        text: '向上级说明风险，争取把日期谈回',
+        score: 1,
+      },
     ],
-    "color": "R",
-    "reverse": false
+    color: 'R',
+    reverse: false,
   },
   {
-    "id": 2,
-    "stem": "当同事用“我感觉”反驳我的数据时，我通常：",
-    "options": [
-      { "text": "当场追问统计口径与样本量", "score": 5 },
-      { "text": "会后私下把原始数据发给他", "score": 3 },
-      { "text": "让一步，先听听他的直觉理由", "score": 2 },
-      { "text": "用更通俗类比让他先认同结论", "score": 1 }
+    id: 2,
+    stem: '当同事用“我感觉”反驳我的数据时，我通常：',
+    options: [
+      {
+        text: '当场追问统计口径与样本量',
+        score: 5,
+      },
+      {
+        text: '会后私下把原始数据发给他',
+        score: 3,
+      },
+      {
+        text: '让一步，先听听他的直觉理由',
+        score: 2,
+      },
+      {
+        text: '用更通俗类比让他先认同结论',
+        score: 1,
+      },
     ],
-    "color": "B",
-    "reverse": false
+    color: 'B',
+    reverse: false,
   },
   {
-    "id": 3,
-    "stem": "公司年会需要主持人，我的第一反应：",
-    "options": [
-      { "text": "立刻举手，这是展示自己的好机会", "score": 5 },
-      { "text": "如果有人陪我一起，我就报名", "score": 3 },
-      { "text": "等领导点名再考虑", "score": 2 },
-      { "text": "尽量回避，把机会让给别人", "score": 1 }
+    id: 3,
+    stem: '公司年会需要主持人，我的第一反应：',
+    options: [
+      {
+        text: '立刻举手，这是展示自己的好机会',
+        score: 5,
+      },
+      {
+        text: '如果有人陪我一起，我就报名',
+        score: 3,
+      },
+      {
+        text: '等领导点名再考虑',
+        score: 2,
+      },
+      {
+        text: '尽量回避，把机会让给别人',
+        score: 1,
+      },
     ],
-    "color": "Y",
-    "reverse": false
+    color: 'Y',
+    reverse: false,
   },
   {
-    "id": 4,
-    "stem": "项目必须裁掉一半人员，我首要考虑：",
-    "options": [
-      { "text": "被裁同事的家庭困难程度", "score": 5 },
-      { "text": "先沟通情绪，再给出客观标准", "score": 3 },
-      { "text": "按绩效排名一刀切，减少争议", "score": 2 },
-      { "text": "向上级争取缓冲期，分批裁员", "score": 1 }
+    id: 4,
+    stem: '项目必须裁掉一半人员，我首要考虑：',
+    options: [
+      {
+        text: '被裁同事的家庭困难程度',
+        score: 5,
+      },
+      {
+        text: '先沟通情绪，再给出客观标准',
+        score: 3,
+      },
+      {
+        text: '按绩效排名一刀切，减少争议',
+        score: 2,
+      },
+      {
+        text: '向上级争取缓冲期，分批裁',
+        score: 1,
+      },
     ],
-    "color": "G",
-    "reverse": false
+    color: 'G',
+    reverse: false,
   },
   {
-    "id": 5,
-    "stem": "我放松充电的常见方式是：",
-    "options": [
-      { "text": "玩竞技手游/运动比赛，赢才痛快", "score": 5 },
-      { "text": "看硬核干货、做思维导图", "score": 3 },
-      { "text": "发朋友圈、组局唱K", "score": 2 },
-      { "text": "宅家陪家人或做手工", "score": 1 }
+    id: 5,
+    stem: '我放松充电的常见方式是：',
+    options: [
+      {
+        text: '玩竞技手游/运动比赛，赢才痛快',
+        score: 5,
+      },
+      {
+        text: '看硬核干货、做思维导图',
+        score: 3,
+      },
+      {
+        text: '发朋友圈、组局唱K',
+        score: 2,
+      },
+      {
+        text: '宅家陪家人或做手工',
+        score: 1,
+      },
     ],
-    "color": "R",
-    "reverse": false
+    color: 'R',
+    reverse: false,
   },
   {
-    "id": 6,
-    "stem": "在会议里有人持续跑题，我会：",
-    "options": [
-      { "text": "直接打断：回到议程", "score": 5 },
-      { "text": "把话题记录到“停车场”白板", "score": 3 },
-      { "text": "用幽默把他拉回来", "score": 2 },
-      { "text": "等他讲完，再温和总结", "score": 1 }
+    id: 6,
+    stem: '在会议里有人持续跑题，我会：',
+    options: [
+      {
+        text: '直接打断：回到议程',
+        score: 5,
+      },
+      {
+        text: '把话题记录到“停车场”白板',
+        score: 3,
+      },
+      {
+        text: '用幽默把他拉回来',
+        score: 2,
+      },
+      {
+        text: '等他讲完，再温和总结',
+        score: 1,
+      },
     ],
-    "color": "B",
-    "reverse": false
+    color: 'B',
+    reverse: false,
   },
   {
-    "id": 7,
-    "stem": "朋友评价我最多的词是：",
-    "options": [
-      { "text": "行动派", "score": 5 },
-      { "text": "逻辑控", "score": 3 },
-      { "text": "气氛王", "score": 2 },
-      { "text": "暖男/知心", "score": 1 }
+    id: 7,
+    stem: '朋友评价我最多的词是：',
+    options: [
+      {
+        text: '行动派',
+        score: 5,
+      },
+      {
+        text: '逻辑控',
+        score: 3,
+      },
+      {
+        text: '气氛王',
+        score: 2,
+      },
+      {
+        text: '暖男/知心',
+        score: 1,
+      },
     ],
-    "color": "R",
-    "reverse": false
+    color: 'R',
+    reverse: false,
   },
   {
-    "id": 8,
-    "stem": "遇到重大失败，我首先：",
-    "options": [
-      { "text": "立刻制定翻盘计划", "score": 5 },
-      { "text": "复盘数据，找根因", "score": 3 },
-      { "text": "发朋友圈求安慰与建议", "score": 2 },
-      { "text": "先让自己和团队情绪落地", "score": 1 }
+    id: 8,
+    stem: '遇到重大失败，我首先：',
+    options: [
+      {
+        text: '立刻制定翻盘计划',
+        score: 5,
+      },
+      {
+        text: '复盘数据，找根因',
+        score: 3,
+      },
+      {
+        text: '发朋友圈求安慰与建议',
+        score: 2,
+      },
+      {
+        text: '先让自己和团队情绪落地',
+        score: 1,
+      },
     ],
-    "color": "R",
-    "reverse": false
+    color: 'R',
+    reverse: false,
   },
   {
-    "id": 9,
-    "stem": "我更无法忍受：",
-    "options": [
-      { "text": "拖延导致错过风口", "score": 5 },
-      { "text": "决策建立在错误数据上", "score": 3 },
-      { "text": "自己的才华没被看见", "score": 2 },
-      { "text": "团队里有人被孤立", "score": 1 }
+    id: 9,
+    stem: '我更无法忍受：',
+    options: [
+      {
+        text: '拖延导致错过风口',
+        score: 5,
+      },
+      {
+        text: '决策建立在错误数据上',
+        score: 3,
+      },
+      {
+        text: '自己的才华没被看见',
+        score: 2,
+      },
+      {
+        text: '团队里有人被孤立',
+        score: 1,
+      },
     ],
-    "color": "R",
-    "reverse": false
+    color: 'R',
+    reverse: false,
   },
   {
-    "id": 10,
-    "stem": "下班前突发紧急需求，我通常：",
-    "options": [
-      { "text": "当天必须干完，哪怕通宵", "score": 5 },
-      { "text": "先评估是否真“紧急且重要”", "score": 3 },
-      { "text": "拉着大家一起点外卖干通宵", "score": 2 },
-      { "text": "询问需求方能否明天一早给", "score": 1 }
+    id: 10,
+    stem: '下班前突发紧急需求，我通常：',
+    options: [
+      {
+        text: '当天必须干完，哪怕通宵',
+        score: 5,
+      },
+      {
+        text: '先评估是否真“紧急且重要”',
+        score: 3,
+      },
+      {
+        text: '拉着大家一起点外卖干通宵',
+        score: 2,
+      },
+      {
+        text: '询问需求方能否明天一早给',
+        score: 1,
+      },
     ],
-    "color": "R",
-    "reverse": false
+    color: 'R',
+    reverse: false,
   },
   {
-    "id": 11,
-    "stem": "我倾向于快速做决定，哪怕信息还不够完整：",
-    "options": [
-      { "text": "完全同意", "score": 5 },
-      { "text": "比较同意", "score": 4 },
-      { "text": "一般", "score": 3 },
-      { "text": "不太同意", "score": 2 }
+    id: 11,
+    stem: '我倾向于快速做决定，哪怕信息还不够完整：',
+    options: [
+      {
+        text: '立即拍板并推进执行',
+        score: 5,
+      },
+      {
+        text: '先列关键假设，边干边验证',
+        score: 3,
+      },
+      {
+        text: '等小样本反馈再动手',
+        score: 2,
+      },
+      {
+        text: '等资料齐全再启动',
+        score: 1,
+      },
     ],
-    "color": "R",
-    "reverse": false
+    color: 'R',
+    reverse: false,
   },
   {
-    "id": 12,
-    "stem": "在团队里，我经常是最先提出解决方案的人：",
-    "options": [
-      { "text": "完全同意", "score": 5 },
-      { "text": "比较同意", "score": 4 },
-      { "text": "一般", "score": 3 },
-      { "text": "不太同意", "score": 2 }
+    id: 12,
+    stem: '在团队里，我经常是最先提出解决方案的人：',
+    options: [
+      {
+        text: '总是我第一个给出做法',
+        score: 5,
+      },
+      {
+        text: '多数时候我先提思路',
+        score: 3,
+      },
+      {
+        text: '偶尔带头，看话题熟悉度',
+        score: 2,
+      },
+      {
+        text: '习惯先听别人再说',
+        score: 1,
+      },
     ],
-    "color": "R",
-    "reverse": false
+    color: 'R',
+    reverse: false,
   },
   {
-    "id": 13,
-    "stem": "面对竞争，我的斗志会明显增强：",
-    "options": [
-      { "text": "完全同意", "score": 5 },
-      { "text": "比较同意", "score": 4 },
-      { "text": "一般", "score": 3 },
-      { "text": "不太同意", "score": 2 }
+    id: 13,
+    stem: '面对竞争，我的斗志会明显增强：',
+    options: [
+      {
+        text: '斗志瞬间拉满，必须赢',
+        score: 5,
+      },
+      {
+        text: '心里有火，表面保持冷静',
+        score: 3,
+      },
+      {
+        text: '按自己节奏走，不被干扰',
+        score: 2,
+      },
+      {
+        text: '避开正面冲突，找差异化',
+        score: 1,
+      },
     ],
-    "color": "R",
-    "reverse": false
+    color: 'R',
+    reverse: false,
   },
   {
-    "id": 14,
-    "stem": "如果流程阻碍了结果，我会选择绕过它：",
-    "options": [
-      { "text": "完全同意", "score": 5 },
-      { "text": "比较同意", "score": 4 },
-      { "text": "一般", "score": 3 },
-      { "text": "不太同意", "score": 2 }
+    id: 14,
+    stem: '如果流程阻碍了结果，我会选择绕过它：',
+    options: [
+      {
+        text: '直接走捷径，先拿到结果',
+        score: 5,
+      },
+      {
+        text: '写邮件备案再绕开',
+        score: 3,
+      },
+      {
+        text: '先请示上级，获准再破例',
+        score: 2,
+      },
+      {
+        text: '按流程走完，避免风险',
+        score: 1,
+      },
     ],
-    "color": "R",
-    "reverse": false
+    color: 'R',
+    reverse: false,
   },
   {
-    "id": 15,
-    "stem": "我享受在高压下工作并仍能达成目标：",
-    "options": [
-      { "text": "完全同意", "score": 5 },
-      { "text": "比较同意", "score": 4 },
-      { "text": "一般", "score": 3 },
-      { "text": "不太同意", "score": 2 }
+    id: 15,
+    stem: '我享受在高压下工作并仍能达成目标：',
+    options: [
+      {
+        text: '高压让我兴奋，效率更高',
+        score: 5,
+      },
+      {
+        text: '短期高压可以接受',
+        score: 3,
+      },
+      {
+        text: '只喜欢适度紧张',
+        score: 2,
+      },
+      {
+        text: '尽量避免高压状态',
+        score: 1,
+      },
     ],
-    "color": "R",
-    "reverse": false
+    color: 'R',
+    reverse: false,
   },
   {
-    "id": 16,
-    "stem": "别人说我讲话像“下命令”，我觉得这很正常：",
-    "options": [
-      { "text": "完全同意", "score": 5 },
-      { "text": "比较同意", "score": 4 },
-      { "text": "一般", "score": 3 },
-      { "text": "不太同意", "score": 2 }
+    id: 16,
+    stem: '我很少打断别人发言：',
+    options: [
+      {
+        text: '总是等对方说完',
+        score: 1,
+      },
+      {
+        text: '多数情况让对方讲完',
+        score: 2,
+      },
+      {
+        text: '偶尔插话纠正关键错误',
+        score: 3,
+      },
+      {
+        text: '常插话，节省时间',
+        score: 5,
+      },
     ],
-    "color": "R",
-    "reverse": false
+    color: 'R',
+    reverse: true,
   },
   {
-    "id": 17,
-    "stem": "失败让我更想立刻翻盘，而不是反思太久：",
-    "options": [
-      { "text": "完全同意", "score": 5 },
-      { "text": "比较同意", "score": 4 },
-      { "text": "一般", "score": 3 },
-      { "text": "不太同意", "score": 2 }
+    id: 17,
+    stem: '为了团队和谐，我可以接受 slower 的节奏：',
+    options: [
+      {
+        text: '完全接受，和谐第一',
+        score: 1,
+      },
+      {
+        text: '最多容忍一天 delay',
+        score: 2,
+      },
+      {
+        text: '小步慢可以，大 delay 不行',
+        score: 3,
+      },
+      {
+        text: '节奏必须快，和谐靠后',
+        score: 5,
+      },
     ],
-    "color": "R",
-    "reverse": false
+    color: 'R',
+    reverse: true,
   },
   {
-    "id": 18,
-    "stem": "我很少打断别人发言：",
-    "options": [
-      { "text": "完全同意", "score": 1 },
-      { "text": "比较同意", "score": 2 },
-      { "text": "一般", "score": 3 },
-      { "text": "不太同意", "score": 5 }
+    id: 18,
+    stem: '遇到冲突，我倾向于先退让再协商：',
+    options: [
+      {
+        text: '总是先让步，避免升级',
+        score: 1,
+      },
+      {
+        text: '先让一步，看对方反应',
+        score: 2,
+      },
+      {
+        text: '各退一步，再找折中',
+        score: 3,
+      },
+      {
+        text: '坚持立场，先辩清楚',
+        score: 5,
+      },
     ],
-    "color": "R",
-    "reverse": true
+    color: 'R',
+    reverse: true,
   },
   {
-    "id": 19,
-    "stem": "为了团队和谐，我可以接受 slower 的节奏：",
-    "options": [
-      { "text": "完全同意", "score": 1 },
-      { "text": "比较同意", "score": 2 },
-      { "text": "一般", "score": 3 },
-      { "text": "不太同意", "score": 5 }
+    id: 19,
+    stem: '做决定前，我会先收集足够数据支持：',
+    options: [
+      {
+        text: '数据不足绝不做决策',
+        score: 5,
+      },
+      {
+        text: '核心数据必须齐全',
+        score: 3,
+      },
+      {
+        text: '关键数据即可，边做边补',
+        score: 2,
+      },
+      {
+        text: '先决策，数据后补',
+        score: 1,
+      },
     ],
-    "color": "R",
-    "reverse": true
+    color: 'B',
+    reverse: false,
   },
   {
-    "id": 20,
-    "stem": "遇到冲突，我倾向于先退让再协商：",
-    "options": [
-      { "text": "完全同意", "score": 1 },
-      { "text": "比较同意", "score": 2 },
-      { "text": "一般", "score": 3 },
-      { "text": "不太同意", "score": 5 }
+    id: 20,
+    stem: '我常被朋友称为“细节控”：',
+    options: [
+      {
+        text: '没错，连标点都检查',
+        score: 5,
+      },
+      {
+        text: '重要细节会抠到底',
+        score: 3,
+      },
+      {
+        text: '只抠关键细节',
+        score: 2,
+      },
+      {
+        text: '更看大局，细节后调',
+        score: 1,
+      },
     ],
-    "color": "R",
-    "reverse": true
+    color: 'B',
+    reverse: false,
   },
   {
-    "id": 21,
-    "stem": "做决定前，我会先收集足够数据支持：",
-    "options": [
-      { "text": "完全同意", "score": 5 },
-      { "text": "比较同意", "score": 4 },
-      { "text": "一般", "score": 3 },
-      { "text": "不太同意", "score": 2 }
+    id: 21,
+    stem: '面对新观点，我的第一反应是“出处是哪？”：',
+    options: [
+      {
+        text: '必问来源和样本',
+        score: 5,
+      },
+      {
+        text: '先问关键出处',
+        score: 3,
+      },
+      {
+        text: '听逻辑，再看出处',
+        score: 2,
+      },
+      {
+        text: '先听价值，再看出处',
+        score: 1,
+      },
     ],
-    "color": "B",
-    "reverse": false
+    color: 'B',
+    reverse: false,
   },
   {
-    "id": 22,
-    "stem": "我常被朋友称为“细节控”：",
-    "options": [
-      { "text": "完全同意", "score": 5 },
-      { "text": "比较同意", "score": 4 },
-      { "text": "一般", "score": 3 },
-      { "text": "不太同意", "score": 2 }
+    id: 22,
+    stem: '我享受把复杂问题拆成可验证的小步骤：',
+    options: [
+      {
+        text: '越拆细越兴奋',
+        score: 5,
+      },
+      {
+        text: '喜欢拆到可验证粒度',
+        score: 3,
+      },
+      {
+        text: '只拆关键步骤',
+        score: 2,
+      },
+      {
+        text: '直接上手，边做边调',
+        score: 1,
+      },
     ],
-    "color": "B",
-    "reverse": false
+    color: 'B',
+    reverse: false,
   },
   {
-    "id": 23,
-    "stem": "面对新观点，我的第一反应是“出处是哪？”：",
-    "options": [
-      { "text": "完全同意", "score": 5 },
-      { "text": "比较同意", "score": 4 },
-      { "text": "一般", "score": 3 },
-      { "text": "不太同意", "score": 2 }
+    id: 23,
+    stem: '如果PPT里有一个数据未标注来源，我会浑身难受：',
+    options: [
+      {
+        text: '立即补充来源，否则不演示',
+        score: 5,
+      },
+      {
+        text: '台下赶紧补注',
+        score: 3,
+      },
+      {
+        text: '口头说明来源即可',
+        score: 2,
+      },
+      {
+        text: '先讲，事后再补',
+        score: 1,
+      },
     ],
-    "color": "B",
-    "reverse": false
+    color: 'B',
+    reverse: false,
   },
   {
-    "id": 24,
-    "stem": "我享受把复杂问题拆成可验证的小步骤：",
-    "options": [
-      { "text": "完全同意", "score": 5 },
-      { "text": "比较同意", "score": 4 },
-      { "text": "一般", "score": 3 },
-      { "text": "不太同意", "score": 2 }
+    id: 24,
+    stem: '我倾向于用Excel/思维导图把信息结构化：',
+    options: [
+      {
+        text: '所有信息必须进表格或导图',
+        score: 5,
+      },
+      {
+        text: '复杂信息先结构化',
+        score: 3,
+      },
+      {
+        text: '只结构化关键信息',
+        score: 2,
+      },
+      {
+        text: '直接在脑里梳理',
+        score: 1,
+      },
     ],
-    "color": "B",
-    "reverse": false
+    color: 'B',
+    reverse: false,
   },
   {
-    "id": 25,
-    "stem": "如果PPT里有一个数据未标注来源，我会浑身难受：",
-    "options": [
-      { "text": "完全同意", "score": 5 },
-      { "text": "比较同意", "score": 4 },
-      { "text": "一般", "score": 3 },
-      { "text": "不太同意", "score": 2 }
+    id: 25,
+    stem: '别人凭直觉拍脑袋，我认为这是对工作不负责：',
+    options: [
+      {
+        text: '完全认同，必须数据说话',
+        score: 5,
+      },
+      {
+        text: '重要决策需数据',
+        score: 3,
+      },
+      {
+        text: '直觉可作参考',
+        score: 2,
+      },
+      {
+        text: '直觉有时更高效',
+        score: 1,
+      },
     ],
-    "color": "B",
-    "reverse": false
+    color: 'B',
+    reverse: false,
   },
   {
-    "id": 26,
-    "stem": "我倾向于用Excel/思维导图把信息结构化：",
-    "options": [
-      { "text": "完全同意", "score": 5 },
-      { "text": "比较同意", "score": 4 },
-      { "text": "一般", "score": 3 },
-      { "text": "不太同意", "score": 2 }
+    id: 26,
+    stem: '我可以在资料不全时先行动再优化：',
+    options: [
+      {
+        text: '先干再说，边跑边调',
+        score: 1,
+      },
+      {
+        text: '关键缺口补了就行动',
+        score: 2,
+      },
+      {
+        text: '核心数据齐再行动',
+        score: 3,
+      },
+      {
+        text: '必须资料齐全才启动',
+        score: 5,
+      },
     ],
-    "color": "B",
-    "reverse": false
+    color: 'B',
+    reverse: true,
   },
   {
-    "id": 27,
-    "stem": "别人凭直觉拍脑袋，我认为这是对工作不负责：",
-    "options": [
-      { "text": "完全同意", "score": 5 },
-      { "text": "比较同意", "score": 4 },
-      { "text": "一般", "score": 3 },
-      { "text": "不太同意", "score": 2 }
+    id: 27,
+    stem: '为了鼓舞士气，我会先讲愿景再补数据：',
+    options: [
+      {
+        text: '先愿景后数据，节奏对',
+        score: 1,
+      },
+      {
+        text: '愿景数据穿插',
+        score: 2,
+      },
+      {
+        text: '数据为主，愿景点缀',
+        score: 3,
+      },
+      {
+        text: '先数据，再愿景',
+        score: 5,
+      },
     ],
-    "color": "B",
-    "reverse": false
+    color: 'B',
+    reverse: true,
   },
   {
-    "id": 28,
-    "stem": "我可以在资料不全时先行动再优化：",
-    "options": [
-      { "text": "完全同意", "score": 1 },
-      { "text": "比较同意", "score": 2 },
-      { "text": "一般", "score": 3 },
-      { "text": "不太同意", "score": 5 }
+    id: 28,
+    stem: '我认为“差不多就行”是高效的表现：',
+    options: [
+      {
+        text: '先上线，再迭代',
+        score: 1,
+      },
+      {
+        text: '大处达标，小处可微调',
+        score: 2,
+      },
+      {
+        text: '关键指标必须到位',
+        score: 3,
+      },
+      {
+        text: '所有细节须达标',
+        score: 5,
+      },
     ],
-    "color": "B",
-    "reverse": true
+    color: 'B',
+    reverse: true,
   },
   {
-    "id": 29,
-    "stem": "为了鼓舞士气，我会先讲愿景再补数据：",
-    "options": [
-      { "text": "完全同意", "score": 1 },
-      { "text": "比较同意", "score": 2 },
-      { "text": "一般", "score": 3 },
-      { "text": "不太同意", "score": 5 }
+    id: 29,
+    stem: '公司年会需要主持人，我的第一反应：',
+    options: [
+      {
+        text: '立刻举手，舞台属于我',
+        score: 5,
+      },
+      {
+        text: '有人陪就报名',
+        score: 3,
+      },
+      {
+        text: '等领导点名',
+        score: 2,
+      },
+      {
+        text: '尽量回避',
+        score: 1,
+      },
     ],
-    "color": "B",
-    "reverse": true
+    color: 'Y',
+    reverse: false,
   },
   {
-    "id": 30,
-    "stem": "我认为“差不多就行”是高效的表现：",
-    "options": [
-      { "text": "完全同意", "score": 1 },
-      { "text": "比较同意", "score": 2 },
-      { "text": "一般", "score": 3 },
-      { "text": "不太同意", "score": 5 }
+    id: 30,
+    stem: '我乐于在陌生人面前做自我介绍：',
+    options: [
+      {
+        text: '主动破冰，兴奋',
+        score: 5,
+      },
+      {
+        text: '对方问就大方回答',
+        score: 3,
+      },
+      {
+        text: '简短介绍，快速结束',
+        score: 2,
+      },
+      {
+        text: '等别人来找我',
+        score: 1,
+      },
     ],
-    "color": "B",
-    "reverse": true
+    color: 'Y',
+    reverse: false,
   },
   {
-    "id": 31,
-    "stem": "我乐于在陌生人面前做自我介绍：",
-    "options": [
-      { "text": "完全同意", "score": 5 },
-      { "text": "比较同意", "score": 4 },
-      { "text": "一般", "score": 3 },
-      { "text": "不太同意", "score": 2 }
+    id: 31,
+    stem: '头脑风暴时，我通常是第一个抛出点子的人：',
+    options: [
+      {
+        text: '总是我先开口',
+        score: 5,
+      },
+      {
+        text: '多数我先提',
+        score: 3,
+      },
+      {
+        text: '偶尔先提',
+        score: 2,
+      },
+      {
+        text: '习惯先听',
+        score: 1,
+      },
     ],
-    "color": "Y",
-    "reverse": false
+    color: 'Y',
+    reverse: false,
   },
   {
-    "id": 32,
-    "stem": "头脑风暴时，我通常是第一个抛出点子的人：",
-    "options": [
-      { "text": "完全同意", "score": 5 },
-      { "text": "比较同意", "score": 4 },
-      { "text": "一般", "score": 3 },
-      { "text": "不太同意", "score": 2 }
+    id: 32,
+    stem: '被人关注会让我兴奋而非紧张：',
+    options: [
+      {
+        text: '聚光灯让我兴奋',
+        score: 5,
+      },
+      {
+        text: '有点紧张但享受',
+        score: 3,
+      },
+      {
+        text: '尽量保持自然',
+        score: 2,
+      },
+      {
+        text: '希望别盯着我',
+        score: 1,
+      },
     ],
-    "color": "Y",
-    "reverse": false
+    color: 'Y',
+    reverse: false,
   },
   {
-    "id": 33,
-    "stem": "被人关注会让我兴奋而非紧张：",
-    "options": [
-      { "text": "完全同意", "score": 5 },
-      { "text": "比较同意", "score": 4 },
-      { "text": "一般", "score": 3 },
-      { "text": "不太同意", "score": 2 }
+    id: 33,
+    stem: '我倾向于用故事或比喻来说明观点：',
+    options: [
+      {
+        text: '故事比数据更打动人',
+        score: 5,
+      },
+      {
+        text: '先故事再数据',
+        score: 3,
+      },
+      {
+        text: '偶尔用故事点缀',
+        score: 2,
+      },
+      {
+        text: '直接给结论',
+        score: 1,
+      },
     ],
-    "color": "Y",
-    "reverse": false
+    color: 'Y',
+    reverse: false,
   },
   {
-    "id": 34,
-    "stem": "我倾向于用故事或比喻来说明观点：",
-    "options": [
-      { "text": "完全同意", "score": 5 },
-      { "text": "比较同意", "score": 4 },
-      { "text": "一般", "score": 3 },
-      { "text": "不太同意", "score": 2 }
+    id: 34,
+    stem: '朋友圈/群聊里，我经常是话题发起人：',
+    options: [
+      {
+        text: '每天发，带动气氛',
+        score: 5,
+      },
+      {
+        text: '有想法就发',
+        score: 3,
+      },
+      {
+        text: '偶尔参与',
+        score: 2,
+      },
+      {
+        text: '基本潜水',
+        score: 1,
+      },
     ],
-    "color": "Y",
-    "reverse": false
+    color: 'Y',
+    reverse: false,
   },
   {
-    "id": 35,
-    "stem": "朋友圈/群聊里，我经常是话题发起人：",
-    "options": [
-      { "text": "完全同意", "score": 5 },
-      { "text": "比较同意", "score": 4 },
-      { "text": "一般", "score": 3 },
-      { "text": "不太同意", "score": 2 }
+    id: 35,
+    stem: '我认为“好玩”是保持团队士气的关键因素：',
+    options: [
+      {
+        text: '必须好玩，效率才高',
+        score: 5,
+      },
+      {
+        text: '好玩+目标，两手抓',
+        score: 3,
+      },
+      {
+        text: '偶尔搞点活动',
+        score: 2,
+      },
+      {
+        text: '专注结果，好玩次要',
+        score: 1,
+      },
     ],
-    "color": "Y",
-    "reverse": false
+    color: 'Y',
+    reverse: false,
   },
   {
-    "id": 36,
-    "stem": "我认为“好玩”是保持团队士气的关键因素：",
-    "options": [
-      { "text": "完全同意", "score": 5 },
-      { "text": "比较同意", "score": 4 },
-      { "text": "一般", "score": 3 },
-      { "text": "不太同意", "score": 2 }
+    id: 36,
+    stem: '即使想法只有60分，我也愿意先说出来再迭代：',
+    options: [
+      {
+        text: '先抛砖，再打磨',
+        score: 5,
+      },
+      {
+        text: '说到70分再开口',
+        score: 3,
+      },
+      {
+        text: '90分才公开',
+        score: 2,
+      },
+      {
+        text: '100分才讲',
+        score: 1,
+      },
     ],
-    "color": "Y",
-    "reverse": false
+    color: 'Y',
+    reverse: false,
   },
   {
-    "id": 37,
-    "stem": "即使想法只有60分，我也愿意先说出来再迭代：",
-    "options": [
-      { "text": "完全同意", "score": 5 },
-      { "text": "比较同意", "score": 4 },
-      { "text": "一般", "score": 3 },
-      { "text": "不太同意", "score": 2 }
+    id: 37,
+    stem: '我很少主动争取上台展示的机会：',
+    options: [
+      {
+        text: '能躲就躲',
+        score: 1,
+      },
+      {
+        text: '被点名才上',
+        score: 2,
+      },
+      {
+        text: '有人陪就上',
+        score: 3,
+      },
+      {
+        text: '主动举手',
+        score: 5,
+      },
     ],
-    "color": "Y",
-    "reverse": false
+    color: 'Y',
+    reverse: true,
   },
   {
-    "id": 38,
-    "stem": "我很少主动争取上台展示的机会：",
-    "options": [
-      { "text": "完全同意", "score": 1 },
-      { "text": "比较同意", "score": 2 },
-      { "text": "一般", "score": 3 },
-      { "text": "不太同意", "score": 5 }
+    id: 38,
+    stem: '在正式场合我偏好低调，避免成为焦点：',
+    options: [
+      {
+        text: '刻意坐角落',
+        score: 1,
+      },
+      {
+        text: '不主动发言',
+        score: 2,
+      },
+      {
+        text: '正常参与',
+        score: 3,
+      },
+      {
+        text: '喜欢站C位',
+        score: 5,
+      },
     ],
-    "color": "Y",
-    "reverse": true
+    color: 'Y',
+    reverse: true,
   },
   {
-    "id": 39,
-    "stem": "在正式场合我偏好低调，避免成为焦点：",
-    "options": [
-      { "text": "完全同意", "score": 1 },
-      { "text": "比较同意", "score": 2 },
-      { "text": "一般", "score": 3 },
-      { "text": "不太同意", "score": 5 }
+    id: 39,
+    stem: '我讲话前会先思考“是否必要”：',
+    options: [
+      {
+        text: '常把话咽回去',
+        score: 1,
+      },
+      {
+        text: '想两遍再说',
+        score: 2,
+      },
+      {
+        text: '想一遍就说',
+        score: 3,
+      },
+      {
+        text: '先说出来再想',
+        score: 5,
+      },
     ],
-    "color": "Y",
-    "reverse": true
+    color: 'Y',
+    reverse: true,
   },
   {
-    "id": 40,
-    "stem": "我讲话前会先思考“是否必要”：",
-    "options": [
-      { "text": "完全同意", "score": 1 },
-      { "text": "比较同意", "score": 2 },
-      { "text": "一般", "score": 3 },
-      { "text": "不太同意", "score": 5 }
+    id: 40,
+    stem: '同事私聊倾诉时，我会放下手头事务倾听：',
+    options: [
+      {
+        text: '立即停下手头事',
+        score: 5,
+      },
+      {
+        text: '把手头事收尾再听',
+        score: 3,
+      },
+      {
+        text: '边听边做事',
+        score: 2,
+      },
+      {
+        text: '让他等我忙完',
+        score: 1,
+      },
     ],
-    "color": "Y",
-    "reverse": true
+    color: 'G',
+    reverse: false,
   },
   {
-    "id": 41,
-    "stem": "同事私聊倾诉时，我会放下手头事务倾听：",
-    "options": [
-      { "text": "完全同意", "score": 5 },
-      { "text": "比较同意", "score": 4 },
-      { "text": "一般", "score": 3 },
-      { "text": "不太同意", "score": 2 }
+    id: 41,
+    stem: '我认为团队氛围比短期业绩更重要：',
+    options: [
+      {
+        text: '氛围第一，业绩第二',
+        score: 5,
+      },
+      {
+        text: '两手都要硬',
+        score: 3,
+      },
+      {
+        text: '业绩为主，氛围辅助',
+        score: 2,
+      },
+      {
+        text: '只看业绩',
+        score: 1,
+      },
     ],
-    "color": "G",
-    "reverse": false
+    color: 'G',
+    reverse: false,
   },
   {
-    "id": 42,
-    "stem": "我认为团队氛围比短期业绩更重要：",
-    "options": [
-      { "text": "完全同意", "score": 5 },
-      { "text": "比较同意", "score": 4 },
-      { "text": "一般", "score": 3 },
-      { "text": "不太同意", "score": 2 }
+    id: 42,
+    stem: '做决定时，我会先问“对谁有影响？”：',
+    options: [
+      {
+        text: '先列出利益相关者',
+        score: 5,
+      },
+      {
+        text: '想到主要受影响的人',
+        score: 3,
+      },
+      {
+        text: '事后通知即可',
+        score: 2,
+      },
+      {
+        text: '按流程走，不管谁',
+        score: 1,
+      },
     ],
-    "color": "G",
-    "reverse": false
+    color: 'G',
+    reverse: false,
   },
   {
-    "id": 43,
-    "stem": "做决定时，我会先问“对谁有影响？”：",
-    "options": [
-      { "text": "完全同意", "score": 5 },
-      { "text": "比较同意", "score": 4 },
-      { "text": "一般", "score": 3 },
-      { "text": "不太同意", "score": 2 }
+    id: 43,
+    stem: '我容易因为拒绝别人而感到内疚：',
+    options: [
+      {
+        text: '几乎无法拒绝',
+        score: 5,
+      },
+      {
+        text: '拒绝后纠结半天',
+        score: 3,
+      },
+      {
+        text: '说明理由就能释怀',
+        score: 2,
+      },
+      {
+        text: '拒绝就拒绝，不内疚',
+        score: 1,
+      },
     ],
-    "color": "G",
-    "reverse": false
+    color: 'G',
+    reverse: false,
   },
   {
-    "id": 44,
-    "stem": "我容易因为拒绝别人而感到内疚：",
-    "options": [
-      { "text": "完全同意", "score": 5 },
-      { "text": "比较同意", "score": 4 },
-      { "text": "一般", "score": 3 },
-      { "text": "不太同意", "score": 2 }
+    id: 44,
+    stem: '新人入职，我主动当 mentor 的概率很高：',
+    options: [
+      {
+        text: '每次都主动报名',
+        score: 5,
+      },
+      {
+        text: '被指派就接受',
+        score: 3,
+      },
+      {
+        text: '看时间安排',
+        score: 2,
+      },
+      {
+        text: '尽量避免',
+        score: 1,
+      },
     ],
-    "color": "G",
-    "reverse": false
+    color: 'G',
+    reverse: false,
   },
   {
-    "id": 45,
-    "stem": "新人入职，我主动当 mentor 的概率很高：",
-    "options": [
-      { "text": "完全同意", "score": 5 },
-      { "text": "比较同意", "score": 4 },
-      { "text": "一般", "score": 3 },
-      { "text": "不太同意", "score": 2 }
+    id: 45,
+    stem: '遇到冲突，我倾向于先安抚情绪再谈事实：',
+    options: [
+      {
+        text: '先处理情绪，再谈事情',
+        score: 5,
+      },
+      {
+        text: '情绪事实同步处理',
+        score: 3,
+      },
+      {
+        text: '先谈事，再关照情绪',
+        score: 2,
+      },
+      {
+        text: '只谈事实，不管情绪',
+        score: 1,
+      },
     ],
-    "color": "G",
-    "reverse": false
+    color: 'G',
+    reverse: false,
   },
   {
-    "id": 46,
-    "stem": "遇到冲突，我倾向于先安抚情绪再谈事实：",
-    "options": [
-      { "text": "完全同意", "score": 5 },
-      { "text": "比较同意", "score": 4 },
-      { "text": "一般", "score": 3 },
-      { "text": "不太同意", "score": 2 }
+    id: 46,
+    stem: '我常被说成“老好人”，但我并不介意：',
+    options: [
+      {
+        text: '欣然接受，好人缘重要',
+        score: 5,
+      },
+      {
+        text: '默认标签，不反驳',
+        score: 3,
+      },
+      {
+        text: '偶尔解释，别过度',
+        score: 2,
+      },
+      {
+        text: '立刻澄清，我不老好',
+        score: 1,
+      },
     ],
-    "color": "G",
-    "reverse": false
+    color: 'G',
+    reverse: false,
   },
   {
-    "id": 47,
-    "stem": "我常被说成“老好人”，但我并不介意：",
-    "options": [
-      { "text": "完全同意", "score": 5 },
-      { "text": "比较同意", "score": 4 },
-      { "text": "一般", "score": 3 },
-      { "text": "不太同意", "score": 2 }
+    id: 47,
+    stem: '为了结果，我可以接受暂时伤害部分人的感情：',
+    options: [
+      {
+        text: '目标第一，情绪后补',
+        score: 1,
+      },
+      {
+        text: '大目标可小伤感情',
+        score: 2,
+      },
+      {
+        text: '尽量兼顾，不行再伤',
+        score: 3,
+      },
+      {
+        text: '绝不牺牲任何人情绪',
+        score: 5,
+      },
     ],
-    "color": "G",
-    "reverse": false
+    color: 'G',
+    reverse: true,
   },
   {
-    "id": 48,
-    "stem": "为了结果，我可以接受暂时伤害部分人的感情：",
-    "options": [
-      { "text": "完全同意", "score": 1 },
-      { "text": "比较同意", "score": 2 },
-      { "text": "一般", "score": 3 },
-      { "text": "不太同意", "score": 5 }
+    id: 48,
+    stem: '我认为“快刀斩乱麻”有时是对团队好：',
+    options: [
+      {
+        text: '长痛不如短痛',
+        score: 1,
+      },
+      {
+        text: '大局混乱时可快刀',
+        score: 2,
+      },
+      {
+        text: '先沟通，再快刀',
+        score: 3,
+      },
+      {
+        text: '绝不快刀，慢慢协商',
+        score: 5,
+      },
     ],
-    "color": "G",
-    "reverse": true
+    color: 'G',
+    reverse: true,
   },
   {
-    "id": 49,
-    "stem": "我认为“快刀斩乱麻”有时是对团队好：",
-    "options": [
-      { "text": "完全同意", "score": 1 },
-      { "text": "比较同意", "score": 2 },
-      { "text": "一般", "score": 3 },
-      { "text": "不太同意", "score": 5 }
+    id: 49,
+    stem: '如果规则不合理，我会直接提出修改而非迁就：',
+    options: [
+      {
+        text: '当场指出，必须改',
+        score: 1,
+      },
+      {
+        text: '收集案例再提议',
+        score: 2,
+      },
+      {
+        text: '先私下沟通，再公开提',
+        score: 3,
+      },
+      {
+        text: '先迁就，避免冲突',
+        score: 5,
+      },
     ],
-    "color": "G",
-    "reverse": true
+    color: 'G',
+    reverse: true,
   },
   {
-    "id": 50,
-    "stem": "如果规则不合理，我会直接提出修改而非迁就：",
-    "options": [
-      { "text": "完全同意", "score": 1 },
-      { "text": "比较同意", "score": 2 },
-      { "text": "一般", "score": 3 },
-      { "text": "不太同意", "score": 5 }
+    id: 50,
+    stem: '头脑风暴时，我通常是第一个抛出点子的人：',
+    options: [
+      {
+        text: '总是我先开口',
+        score: 5,
+      },
+      {
+        text: '多数我先提',
+        score: 3,
+      },
+      {
+        text: '偶尔先提',
+        score: 2,
+      },
+      {
+        text: '习惯先听',
+        score: 1,
+      },
     ],
-    "color": "G",
-    "reverse": true
+    color: 'Y',
+    reverse: false,
   },
   {
-    "id": 51,
-    "stem": "我倾向于用故事或比喻来说明观点：",
-    "options": [
-      { "text": "完全同意", "score": 5 },
-      { "text": "比较同意", "score": 4 },
-      { "text": "一般", "score": 3 },
-      { "text": "不太同意", "score": 2 }
+    id: 51,
+    stem: '我倾向于用故事或比喻来说明观点：',
+    options: [
+      {
+        text: '故事比数据更打动人',
+        score: 5,
+      },
+      {
+        text: '先故事再数据',
+        score: 3,
+      },
+      {
+        text: '偶尔用故事点缀',
+        score: 2,
+      },
+      {
+        text: '直接给结论',
+        score: 1,
+      },
     ],
-    "color": "Y",
-    "reverse": false
+    color: 'Y',
+    reverse: false,
   },
   {
-    "id": 52,
-    "stem": "我享受在高压下工作并仍能达成目标：",
-    "options": [
-      { "text": "完全同意", "score": 5 },
-      { "text": "比较同意", "score": 4 },
-      { "text": "一般", "score": 3 },
-      { "text": "不太同意", "score": 2 }
+    id: 52,
+    stem: '朋友圈/群聊里，我经常是话题发起人：',
+    options: [
+      {
+        text: '每天发，带动气氛',
+        score: 5,
+      },
+      {
+        text: '有想法就发',
+        score: 3,
+      },
+      {
+        text: '偶尔参与',
+        score: 2,
+      },
+      {
+        text: '基本潜水',
+        score: 1,
+      },
     ],
-    "color": "R",
-    "reverse": false
+    color: 'Y',
+    reverse: false,
   },
   {
-    "id": 53,
-    "stem": "我倾向于快速做决定，哪怕信息还不够完整：",
-    "options": [
-      { "text": "完全同意", "score": 5 },
-      { "text": "比较同意", "score": 4 },
-      { "text": "一般", "score": 3 },
-      { "text": "不太同意", "score": 2 }
+    id: 53,
+    stem: '我认为“好玩”是保持团队士气的关键因素：',
+    options: [
+      {
+        text: '必须好玩，效率才高',
+        score: 5,
+      },
+      {
+        text: '好玩+目标，两手抓',
+        score: 3,
+      },
+      {
+        text: '偶尔搞点活动',
+        score: 2,
+      },
+      {
+        text: '专注结果，好玩次要',
+        score: 1,
+      },
     ],
-    "color": "R",
-    "reverse": false
+    color: 'Y',
+    reverse: false,
   },
   {
-    "id": 54,
-    "stem": "我倾向于用Excel/思维导图把信息结构化：",
-    "options": [
-      { "text": "完全同意", "score": 5 },
-      { "text": "比较同意", "score": 4 },
-      { "text": "一般", "score": 3 },
-      { "text": "不太同意", "score": 2 }
+    id: 54,
+    stem: '即使想法只有60分，我也愿意先说出来再迭代：',
+    options: [
+      {
+        text: '先抛砖，再打磨',
+        score: 5,
+      },
+      {
+        text: '说到70分再开口',
+        score: 3,
+      },
+      {
+        text: '90分才公开',
+        score: 2,
+      },
+      {
+        text: '100分才讲',
+        score: 1,
+      },
     ],
-    "color": "B",
-    "reverse": false
+    color: 'Y',
+    reverse: false,
   },
   {
-    "id": 55,
-    "stem": "我倾向于先安抚情绪再谈事实：",
-    "options": [
-      { "text": "完全同意", "score": 5 },
-      { "text": "比较同意", "score": 4 },
-      { "text": "一般", "score": 3 },
-      { "text": "不太同意", "score": 2 }
+    id: 55,
+    stem: '我很少主动争取上台展示的机会：',
+    options: [
+      {
+        text: '能躲就躲',
+        score: 1,
+      },
+      {
+        text: '被点名才上',
+        score: 2,
+      },
+      {
+        text: '有人陪就上',
+        score: 3,
+      },
+      {
+        text: '主动举手',
+        score: 5,
+      },
     ],
-    "color": "G",
-    "reverse": false
+    color: 'Y',
+    reverse: true,
   },
   {
-    "id": 56,
-    "stem": "我倾向于用故事或比喻来说明观点：",
-    "options": [
-      { "text": "完全同意", "score": 5 },
-      { "text": "比较同意", "score": 4 },
-      { "text": "一般", "score": 3 },
-      { "text": "不太同意", "score": 2 }
+    id: 56,
+    stem: '在正式场合我偏好低调，避免成为焦点：',
+    options: [
+      {
+        text: '刻意坐角落',
+        score: 1,
+      },
+      {
+        text: '不主动发言',
+        score: 2,
+      },
+      {
+        text: '正常参与',
+        score: 3,
+      },
+      {
+        text: '喜欢站C位',
+        score: 5,
+      },
     ],
-    "color": "Y",
-    "reverse": false
+    color: 'Y',
+    reverse: true,
   },
   {
-    "id": 57,
-    "stem": "我倾向于快速做决定，哪怕信息还不够完整：",
-    "options": [
-      { "text": "完全同意", "score": 5 },
-      { "text": "比较同意", "score": 4 },
-      { "text": "一般", "score": 3 },
-      { "text": "不太同意", "score": 2 }
+    id: 57,
+    stem: '我讲话前会先思考“是否必要”：',
+    options: [
+      {
+        text: '常把话咽回去',
+        score: 1,
+      },
+      {
+        text: '想两遍再说',
+        score: 2,
+      },
+      {
+        text: '想一遍就说',
+        score: 3,
+      },
+      {
+        text: '先说出来再想',
+        score: 5,
+      },
     ],
-    "color": "R",
-    "reverse": false
+    color: 'Y',
+    reverse: true,
   },
   {
-    "id": 58,
-    "stem": "我倾向于用Excel/思维导图把信息结构化：",
-    "options": [
-      { "text": "完全同意", "score": 5 },
-      { "text": "比较同意", "score": 4 },
-      { "text": "一般", "score": 3 },
-      { "text": "不太同意", "score": 2 }
+    id: 58,
+    stem: '同事私聊倾诉时，我会放下手头事务倾听：',
+    options: [
+      {
+        text: '立即停下手头事',
+        score: 5,
+      },
+      {
+        text: '把手头事收尾再听',
+        score: 3,
+      },
+      {
+        text: '边听边做事',
+        score: 2,
+      },
+      {
+        text: '让他等我忙完',
+        score: 1,
+      },
     ],
-    "color": "B",
-    "reverse": false
+    color: 'G',
+    reverse: false,
   },
   {
-    "id": 59,
-    "stem": "我倾向于先安抚情绪再谈事实：",
-    "options": [
-      { "text": "完全同意", "score": 5 },
-      { "text": "比较同意", "score": 4 },
-      { "text": "一般", "score": 3 },
-      { "text": "不太同意", "score": 2 }
+    id: 59,
+    stem: '我认为团队氛围比短期业绩更重要：',
+    options: [
+      {
+        text: '氛围第一，业绩第二',
+        score: 5,
+      },
+      {
+        text: '两手都要硬',
+        score: 3,
+      },
+      {
+        text: '业绩为主，氛围辅助',
+        score: 2,
+      },
+      {
+        text: '只看业绩',
+        score: 1,
+      },
     ],
-    "color": "G",
-    "reverse": false
+    color: 'G',
+    reverse: false,
   },
   {
-    "id": 60,
-    "stem": "我倾向于用故事或比喻来说明观点：",
-    "options": [
-      { "text": "完全同意", "score": 5 },
-      { "text": "比较同意", "score": 4 },
-      { "text": "一般", "score": 3 },
-      { "text": "不太同意", "score": 2 }
+    id: 60,
+    stem: '遇到冲突，我倾向于先安抚情绪再谈事实：',
+    options: [
+      {
+        text: '先处理情绪，再谈事情',
+        score: 5,
+      },
+      {
+        text: '情绪事实同步处理',
+        score: 3,
+      },
+      {
+        text: '先谈事，再关照情绪',
+        score: 2,
+      },
+      {
+        text: '只谈事实，不管情绪',
+        score: 1,
+      },
     ],
-    "color": "Y",
-    "reverse": false
-  }
+    color: 'G',
+    reverse: false,
+  },
 ]

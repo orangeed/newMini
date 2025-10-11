@@ -7,10 +7,10 @@
 -->
 <script lang="js" setup>
 import { ref } from 'vue'
-import OButton from '../../component/button/index.vue'
-import OMessage from '../../component/message/index.vue'
-import OSpin from '../../component/spin/index.vue'
-import OTextarea from '../../component/textarea/index.vue'
+import OButton from '../../components/button/index.vue'
+import OMessage from '../../components/message/index.vue'
+import OSpin from '../../components/spin/index.vue'
+import OTextarea from '../../components/textarea/index.vue'
 import { createNewUrl } from '../../serve/shortUrl'
 import { useClipboard } from '../../utils/index'
 import { Message } from '../../utils/message'

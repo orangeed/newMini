@@ -1,10 +1,10 @@
 <!-- 新写的短剧页面 -->
 <script lang="js" setup>
 import { reactive, ref } from 'vue'
-import OMessage from '../../component/message/index.vue'
-import MyPagination from '../../component/pagination/index.vue'
-import Tabs from '../../component/tabs/index.vue'
-import TabPane from '../../component/tabs/TabPane.vue'
+import OMessage from '../../components/message/index.vue'
+import MyPagination from '../../components/pagination/index.vue'
+import Tabs from '../../components/tabs/index.vue'
+import TabPane from '../../components/tabs/TabPane.vue'
 import { getDuanjuPage, patchNum, saveLookTime } from '../../serve/duanju'
 import { MOVIES_TYPE } from '../../utils/emun'
 import { useClipboard } from '../../utils/index'

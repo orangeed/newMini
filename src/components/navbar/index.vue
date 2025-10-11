@@ -6,7 +6,7 @@
  * @FilePath: \newMini\src\component\navbar\index.vue
 -->
 <script setup lang="ts">
-import { useNavBarContext } from '../../utils/useNavBarHeight.ts'
+import { useNavBarContext } from '../../utils/useNavBarHeight.js'
 
 const props = defineProps<{
   title?: string

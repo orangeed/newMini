@@ -2,11 +2,11 @@
 <script lang="js" setup>
 import { ref } from 'vue'
 import { downloadAndSaveFile, downloadAndSaveFiles } from '@/utils'
-import OButton from '../../component/button/index.vue'
-import OCard from '../../component/card/index.vue'
-import Oimage from '../../component/image/index.vue'
-import OSpin from '../../component/spin/index.vue'
-import OTextarea from '../../component/textarea/index.vue'
+import OButton from '../../components/button/index.vue'
+import OCard from '../../components/card/index.vue'
+import Oimage from '../../components/image/index.vue'
+import OSpin from '../../components/spin/index.vue'
+import OTextarea from '../../components/textarea/index.vue'
 import { removeWaterMark } from '../../serve/removeWaterMark'
 
 const text = ref('')

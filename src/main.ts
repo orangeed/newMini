@@ -8,7 +8,7 @@
 import * as Pinia from 'pinia'
 import { createSSRApp } from 'vue'
 import App from './App.vue'
-import CostomNavBar from './component/navbar/index.vue'
+import CostomNavBar from './components/navbar/index.vue'
 import './styles/arco.scss'
 
 export function createApp() {

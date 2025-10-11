@@ -1,7 +1,7 @@
 <!-- 软件收集处 -->
 <script lang="js" setup name="soft">
 import { ref } from 'vue'
-import omodal from '../../component/modal/index.vue'
+import omodal from '../../components/modal/index.vue'
 import { getSoftList } from '../../serve/soft'
 import { useClipboard } from '../../utils/index'
 import { Message } from '../../utils/message'
