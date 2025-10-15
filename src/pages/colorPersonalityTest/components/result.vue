@@ -1,6 +1,5 @@
 <script lang="js" setup name=''>
-// import UCharts from './u-charts.js'
-import qiunDataCharts from '../../../components/qiun-data-charts/qiun-data-charts/qiun-data-charts.vue'
+import PieChart from '../../../components/chart/pie/index.vue'
 
 const props = defineProps({
   result: {
@@ -9,34 +8,7 @@ const props = defineProps({
   },
 })
 
-// console.log('UCharts', UCharts)
-
-const uChartsInstance = ref(null)
-
-const chartsData = ref({
-  series: [
-    {
-      data: [{ name: '红色', value: props.result.raw.R, labelText: `红色：${props.result.raw.R}分` }, { name: '蓝色', value: props.result.raw.B, labelText: `蓝色：${props.result.raw.B}分` }, { name: '黄色', value: props.result.raw.Y, labelText: `黄色：${props.result.raw.Y}分` }, { name: '绿色', value: props.result.raw.G, labelText: `绿色：${props.result.raw.G}分` }],
-    },
-  ],
-})
-
-const opts = {
-  color: ['#EE6666', '#1890FF', '#FAC858', '#91CB74'],
-  padding: [5, 5, 5, 5],
-  enableScroll: false,
-  extra: {
-    pie: {
-      activeOpacity: 0.5,
-      activeRadius: 10,
-      offsetAngle: 0,
-      labelWidth: 15,
-      border: true,
-      borderWidth: 3,
-      borderColor: '#FFFFFF',
-    },
-  },
-}
+const chartsData = ref([{ name: '红色', value: props.result.raw.R, labelText: `红色：${props.result.raw.R}分`, color: '#EE6666' }, { name: '蓝色', value: props.result.raw.B, labelText: `蓝色：${props.result.raw.B}分`, color: '#1890FF' }, { name: '黄色', value: props.result.raw.Y, labelText: `黄色：${props.result.raw.Y}分`, color: '#FAC858' }, { name: '绿色', value: props.result.raw.G, labelText: `绿色：${props.result.raw.G}分`, color: '#91CB74' }])
 
 const colorTextObj = {
   R: '红色',
@@ -47,54 +19,19 @@ const colorTextObj = {
 
 const colorText = ref('')
 
-// function handleLoadEcharts() {
-//   const data = {
-//     series: [
-//       {
-//         data: [{ name: '红色', value: props.result.raw.R, labelText: `红色：${props.result.raw.R}分` }, { name: '蓝色', value: props.result.raw.B, labelText: `蓝色：${props.result.raw.B}分` }, { name: '黄色', value: props.result.raw.Y, labelText: `黄色：${props.result.raw.Y}分` }, { name: '绿色', value: props.result.raw.G, labelText: `绿色：${props.result.raw.G}分` }],
-//       },
-//     ],
-//   }
-//   const ctx = uni.createCanvasContext('result')
-//   uChartsInstance.value = new UCharts({
-//     type: 'pie',
-//     context: ctx,
-//     width: uni.upx2px((750 - 40 - 48) * 0.9),
-//     height: uni.upx2px(500),
-//     series: data.series,
-//     animation: true,
-//     background: '#FFFFFF',
-//     color: ['#EE6666', '#1890FF', '#FAC858', '#91CB74'],
-//     extra: {
-//       pie: {
-//         activeOpacity: 0.5,
-//         activeRadius: 10,
-//         offsetAngle: 0,
-//         labelWidth: 15,
-//         border: true,
-//         borderWidth: 3,
-//         borderColor: '#FFFFFF',
-//       },
-//     },
-//   })
-//   colorText.value = colorTextObj[props.result.primary]
-// }
-
 function handleGetTextColor() {
   return props.result.primary === 'R' ? 'text-red-600' : props.result.primary === 'B' ? 'text-blue-600' : props.result.primary === 'Y' ? 'text-yellow-600' : 'text-green-600'
 }
 
 onMounted(() => {
   colorText.value = colorTextObj[props.result.primary]
-  // handleLoadEcharts()
 })
 </script>
 
 <template>
   <div class="result-page px-5 pb-5 ">
     <div class="rounded bg-white p-6 shadow-md" style="width: 90vw;">
-      <!-- <canvas id="result" canvas-id="result" class="result-charts" type="2d" /> -->
-      <qiun-data-charts ref="uChartsInstance" type="pie" :opts="opts" :chartData="chartsData" />
+      <PieChart :data="chartsData" :size="300" />
       <div>
         <p class="mb-4 text-xs text-red-600">
           注：该测试为性格倾向参考，非诊断性工具。更多的测试详情，可以截图问问AI工具，比如豆包、kimi、deepseek等。
