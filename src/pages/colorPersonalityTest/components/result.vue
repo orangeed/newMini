@@ -1,6 +1,12 @@
+<!--
+ * @Author: chenjie
+ * @Date: 2025-10-10 14:22:57
+ * @LastEditors: chenjie chenjie@i2value.com
+ * @LastEditTime: 2025-10-17 11:42:25
+ * @FilePath: \newMini\src\pages\colorPersonalityTest\components\result.vue
+ * @Description: 测试结果
+-->
 <script lang="js" setup name=''>
-import PieChart from '../../../components/chart/pie/index.vue'
-
 const props = defineProps({
   result: {
     type: Object,
@@ -8,7 +14,29 @@ const props = defineProps({
   },
 })
 
-const chartsData = ref([{ name: '红色', value: props.result.raw.R, labelText: `红色：${props.result.raw.R}分`, color: '#EE6666' }, { name: '蓝色', value: props.result.raw.B, labelText: `蓝色：${props.result.raw.B}分`, color: '#1890FF' }, { name: '黄色', value: props.result.raw.Y, labelText: `黄色：${props.result.raw.Y}分`, color: '#FAC858' }, { name: '绿色', value: props.result.raw.G, labelText: `绿色：${props.result.raw.G}分`, color: '#91CB74' }])
+const chartsData = ref({
+  series: [
+    {
+      data: [{ name: '红色', value: props.result.raw.R, labelText: `红色：${props.result.raw.R}分` }, { name: '蓝色', value: props.result.raw.B, labelText: `蓝色：${props.result.raw.B}分` }, { name: '黄色', value: props.result.raw.Y, labelText: `黄色：${props.result.raw.Y}分` }, { name: '绿色', value: props.result.raw.G, labelText: `绿色：${props.result.raw.G}分` }],
+    },
+  ],
+})
+const opts = {
+  color: ['#EE6666', '#1890FF', '#FAC858', '#91CB74'],
+  padding: [5, 5, 5, 5],
+  enableScroll: false,
+  extra: {
+    pie: {
+      activeOpacity: 0.5,
+      activeRadius: 10,
+      offsetAngle: 0,
+      labelWidth: 15,
+      border: true,
+      borderWidth: 3,
+      borderColor: '#FFFFFF',
+    },
+  },
+}
 
 const colorTextObj = {
   R: '红色',
@@ -31,7 +59,7 @@ onMounted(() => {
 <template>
   <div class="result-page px-5 pb-5 ">
     <div class="rounded bg-white p-6 shadow-md" style="width: 90vw;">
-      <PieChart :data="chartsData" :size="300" />
+      <qiun-data-charts type="pie" :opts="opts" :chartData="chartsData" />
       <div>
         <p class="mb-4 text-xs text-red-600">
           注：该测试为性格倾向参考，非诊断性工具。更多的测试详情，可以截图问问AI工具，比如豆包、kimi、deepseek等。

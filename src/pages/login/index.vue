@@ -2,7 +2,7 @@
  * @Author: chenjie
  * @Date: 2025-05-13 10:13:38
  * @LastEditors: chenjie chenjie@i2value.com
- * @LastEditTime: 2025-10-10 14:36:23
+ * @LastEditTime: 2025-10-17 11:40:06
  * @FilePath: \newMini\src\pages\login\index.vue
 -->
 <script lang="js" setup name="login">
@@ -88,10 +88,10 @@ handleGetMenuList()
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
   }
 
-  .item:first-child {
-    width: 88%;
-    height: 160px;
-  }
+  // .item:first-child {
+  //   width: 88%;
+  //   height: 160px;
+  // }
 
   /* 给不同菜单设置不同背景图 */
   .item:nth-child(1) {

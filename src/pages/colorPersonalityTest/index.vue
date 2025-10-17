@@ -13,22 +13,22 @@ const versions = [
 ]
 
 const selectedVersion = ref(null)
-const processState = ref('result') // select, topic, result
+const processState = ref('select') // select, topic, result
 const result = ref({
-  primary: 'R',
-  secondary: 'B',
-  raw: {
-    R: 17,
-    B: 3,
-    Y: 3,
-    G: 2,
-  },
-  radar: [
-    17,
-    3,
-    3,
-    2,
-  ],
+  // primary: 'R',
+  // secondary: 'B',
+  // raw: {
+  //   R: 17,
+  //   B: 3,
+  //   Y: 3,
+  //   G: 2,
+  // },
+  // radar: [
+  //   17,
+  //   3,
+  //   3,
+  //   2,
+  // ],
 })
 
 function handleStart(versionKey) {
