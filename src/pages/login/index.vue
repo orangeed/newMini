@@ -2,7 +2,7 @@
  * @Author: chenjie
  * @Date: 2025-05-13 10:13:38
  * @LastEditors: chenjie chenjie@i2value.com
- * @LastEditTime: 2025-10-17 11:40:06
+ * @LastEditTime: 2025-10-17 15:16:27
  * @FilePath: \newMini\src\pages\login\index.vue
 -->
 <script lang="js" setup name="login">
@@ -130,7 +130,7 @@ handleGetMenuList()
     /* 网盘会员 */
   }
   .item:nth-child(8) {
-    background-image: url('https://picsum.photos/id/1066/600/400');
+    background-image: url('https://picsum.photos/id/1067/600/400');
     /* 测试性格测试 */
   }
 }
