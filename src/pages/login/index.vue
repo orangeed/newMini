@@ -9,10 +9,17 @@
 import { ref } from 'vue'
 import { getMenuList } from '../../serve/login'
 import { useNavBarContext } from '../../utils/useNavBarHeight.ts'
+import useShare from '../../utils/useShare'
 
 const { navBarHeight } = useNavBarContext()
 
 const list = ref([])
+// 调用分享函数，可传入当前页面的自定义配置
+useShare({
+  shareAppMessage: {
+    title: '快来领取你的工具箱吧', // 覆盖默认标题
+  },
+})
 
 // 跳转路由
 function handleGoTo(item) {
@@ -129,6 +136,7 @@ handleGetMenuList()
     background-image: url('https://picsum.photos/id/1065/600/400');
     /* 网盘会员 */
   }
+
   .item:nth-child(8) {
     background-image: url('https://picsum.photos/id/1067/600/400');
     /* 测试性格测试 */
