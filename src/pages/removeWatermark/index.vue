@@ -8,8 +8,15 @@ import Oimage from '../../components/image/index.vue'
 import OSpin from '../../components/spin/index.vue'
 import OTextarea from '../../components/textarea/index.vue'
 import { removeWaterMark } from '../../serve/removeWaterMark'
+import useShare from '../../utils/useShare'
 
 const text = ref('')
+// 调用分享函数，可传入当前页面的自定义配置
+useShare({
+  shareAppMessage: {
+    title: '快来领取你的免水印图片吧', // 覆盖默认标题
+  },
+})
 
 const result = ref({})
 
