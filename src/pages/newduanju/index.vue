@@ -10,6 +10,7 @@ import { MOVIES_TYPE } from '../../utils/emun'
 import { useClipboard } from '../../utils/index'
 import { Message } from '../../utils/message'
 import { useNavBarContext } from '../../utils/useNavBarHeight.ts'
+import useShare from '../../utils/useShare'
 
 const { navBarHeight } = useNavBarContext()
 const pageConfig = reactive({ page: 1, size: 15, total: 0, type: 'all' })
@@ -18,6 +19,12 @@ const result = ref([])
 const searchText = ref('')
 const navigation = [{ name: '全部', type: 'all' }, { name: '短剧', type: '' }, { name: '电影', type: '3' }, { name: '电视剧', type: '1' }, { name: '动漫', type: '4' }, { name: '纪录片', type: '5' }]
 const { copy } = useClipboard()
+// 调用分享函数，可传入当前页面的自定义配置
+useShare({
+  shareAppMessage: {
+    title: '快来领取你的影视资源吧', // 覆盖默认标题
+  },
+})
 
 // 分页查询
 function handleSearchByPage() {

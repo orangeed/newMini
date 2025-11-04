@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 import { useNavBarContext } from '../../utils/useNavBarHeight.ts'
+import useShare from '../../utils/useShare'
 import topicList from './components/data'
 import Result from './components/result.vue'
 import Topic from './components/topic.vue'
@@ -11,6 +12,12 @@ const versions = [
   { key: 'standard', name: '标准版', count: 30, desc: '团队与沟通使用的中等精度版本' },
   { key: 'deep', name: '深度版', count: 60, desc: '更稳定的性格倾向结果（题库可扩展）' },
 ]
+// 调用分享函数，可传入当前页面的自定义配置
+useShare({
+  shareAppMessage: {
+    title: '快来领取你的性格色彩吧', // 覆盖默认标题
+  },
+})
 
 const selectedVersion = ref(null)
 const processState = ref('select') // select, topic, result
@@ -61,7 +68,7 @@ function handleResult(data) {
 <template>
   <div id="color-text">
     <!-- #ifndef H5 -->
-    <CostomNavBar title="色彩性格测试" showBack background="#04D76A" />
+    <CostomNavBar title="性格色彩测试" showBack background="#04D76A" />
     <!-- #endif -->
     <div class="color-text  bg-gray-100" :style="{ paddingTop: `${navBarHeight}px` }">
       <div
@@ -72,10 +79,10 @@ function handleResult(data) {
         <div v-if="processState === 'select'" class="mx-5 max-w-3xl rounded-2xl bg-white p-6 shadow-md">
           <header class="mb-6">
             <h1 class="text-2xl font-semibold">
-              色彩性格测试
+              性格色彩测试
             </h1>
             <p class="mt-2 text-sm text-gray-500">
-              选择测试版本 → 完成题目 → 查看色彩性格结果
+              选择测试版本 → 完成题目 → 查看性格色彩结果
             </p>
           </header>
 
